@@ -1,0 +1,316 @@
+<html><head><title>Tamam</title>
+
+<!--<script type="text/javascript" src="../../../../globals/wpicif.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+<script type="text/javascript" src="../../../../globals/picif.js"></script>
+-->
+<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+//	picif_start();
+//alert("numero uno");
+	FIRST="OFF";
+	FIRSTSRC="OFF";
+	loop = new Array;
+	time=400;
+	ANYACTION=1;
+	bfr="url('"; aft="')";
+	dwell=22;
+	inc=1;
+	lpl=0;
+	stop=1;
+	$(".pic>img").each(function(){  //this.height=85;
+	});
+
+function run(){
+  $('#targ').delay(10*dwell).show(1,function(){
+    if(1>stop){
+      inc+=1; if(lpl<inc)inc=1;
+      FIRST.src=loop[inc-1];
+      run();}
+  });
+}
+ $(".r").click(function(event){
+    stop=1;
+    FIRST.src=FIRSTSRC;
+    loop = new Array;
+ });
+
+
+function imageshack2(n,ss) {	var s=ss.split("/");
+	return(
+		"http://img"+s[0]+".imageshack.us/img"
+		+s[0]+"/"+s[1]+"/"+n);	}
+
+  $("#full").click(function(event){	// -	-	full click function
+		ClicFull=this;
+		ClicFullID=fullid;
+		ClicFullSRC=this.src;
+
+//	alert(5+" numero uno");
+
+		for (nID=0; !(ClicFullID==circuit[nID]);  nID++){};
+
+<!--\q	-	-	-	-	-	-	-	-	-	M O D 1	-	-	-->
+
+	if(nID==circuit.length-1){nID=0;}else{nID+=1;}
+	nSrc=$("#"+circuit[nID]).attr('src');
+
+		if(nSrc.match("imageshack")) {
+		} else {
+			s=nSrc.split("/");
+			nAlt=$("#"+circuit[nID]).attr('alt');
+			nAlt=nAlt.split(":");
+			constSRC=imageshack2(s[s.length-1],nAlt[1]);
+			nSrc=constSRC;
+			$("#"+circuit[nID]).attr('src',nSrc);
+		}
+
+
+//	alert(7+" numero tres "+circuit[nID]+"..."+nSrc);
+
+		this.src=nSrc;
+		ClicFullSRC=nSrc;
+		fullid=circuit[nID];
+/*
+*/
+//	alert(6+" numero duos "+nID);
+		$(".note").append("<br><strong> full </strong>"
+		+ " nID/ " + nID
+//		+ "<br>circuit[nID]/ " + circuit[nID]
+//		+ "<br>ClicFullID/ " + ClicFullID
+		);
+
+});
+
+  $(".pic").click(function(event){	// -	-	pic click function
+	$(this).find("img").each(function(){
+		ClicPic=this;
+		ClicPicSRC=this.src;
+		fullid=this.id;
+	if(ClicPicSRC.match("imageshack")) {
+		constSRC=ClicPicSRC;
+		$("#full").attr('src',constSRC);
+	} else {
+		s=ClicPicSRC.split("/");
+//		var slast= s[s.length-1];
+		ClicPicALT=this.alt.split(":");
+		constSRC=imageshack2(s[s.length-1],ClicPicALT[1]);
+		this.src=constSRC;
+		$("#full").attr('src',constSRC);
+
+		var parentEls = $(this).parents(".mark")
+			.map(function () { return this.tagName+":"+this.className+"/"+this.id; })
+			.get().join(", ");
+		var ps = $(this).parents(".mark");
+		circuit = $(ps[0]).find("div.pic>img")
+			.map(function () { return this.id; })
+			.get();
+
+
+//var ibs = $(ps[0]).find("div.pic>img")
+//		.map(function () { return this.id; }) .get().join(", ");
+//var ibs = $(ps[0]).find("div.pic>img")
+//		.map(function () { return this.id+":"+this.parentNode.className; })
+//		.get().join(", ");
+//var ibs = $(ps[0]).find("div.pic>img") .get();
+//var ibs = $(ps[0]).find("img").get();
+//var ibs = $(ps[0]).find("img")
+//		.map(function () { return this.id; }).get();
+//var ibs = $(ps[0]).find("img")
+//		.map(function () { return this.id; }).get();
+
+//	alert(4+" numero zip");
+
+		$(".note").append("<br><strong>" + parentEls+ "</strong>"
+		+"<br>id/ "+fullid +"<br>ps/ "+ps
+		+"<br>circuit/ "+circuit
+		+"<br>circuit[0]/ "+circuit[0]);
+}});});
+
+/*
+
+image
+	hier: u/d
+	shuf: ar r/f af
+	cut plant magnify
+thumbs
+
+
+*/
+
+
+  $(".l").click(function(event){	// -	-	l click function
+    $(this.parentNode).find(".pic:first>img").each(function(){
+      this.setAttribute('id','targ');
+      FIRST=this;  FIRSTSRC=FIRST.src;  });
+    $(this.parentNode).find(".pic>img").each(function(){
+      loop.push(this.src);  });
+      lpl=loop.length;
+      dwell=$("#dwellin").val();
+    stop=0;
+    run();
+   });
+
+
+  $(".input:text:first").focus();
+
+  $(".note").click(function(event){
+//alert("note bene");
+	this.innerHTML= "\n<br \>"+this.innerHTML;
+
+	this.innerHTML= "\n<br \>ClicPic= "+ClicPic+this.innerHTML;
+	this.innerHTML= "\n<br \>ClicPicSRC= "+ClicPicSRC+this.innerHTML;
+	this.innerHTML= "\n<br \>lpl= "+lpl+""+this.innerHTML;
+	this.innerHTML= "\n<br \>dwell= "+dwell+""+this.innerHTML;
+	this.innerHTML= "\n<br \>FIRSTSRC= "+FIRSTSRC+""+this.innerHTML;
+  });
+ });
+</script>
+<style  type="text/css">
+.pic  {font-size: smaller;
+  }
+.move  {font-size: 250%;
+  }
+.pic img  {//height:108
+}
+.note  {float: left;
+  border: 1px solid}
+.l  {float: left;
+    color:red;
+  font-size: 700%;
+  text-align: center;}
+.r  {float: left;
+    color:red;
+  font-size: 700%;
+  text-align: center;}
+.cnb  {//color:red
+}
+</style>
+
+</head>
+<body onload="picif_start();" >
+
+<img class="thum" align="right" height=250 onDblClick="height=250"
+onClick="height=ff*height;"
+src="http://img204.imageshack.us/img204/6551/m51009203894.jpg" alt="">
+
+<div><center>
+<a href="http://db.tgu.ca/srp/shows/1/0/tamam/i.htm">
+	<font size="+1">
+		http://db.tgu.ca/srp
+		<br />/srp/shows/1/0/
+		<br /><b>tamam</b>
+		<br />/i.htm
+		<br />
+	</font>
+</a>
+
+<!--\q	-	-	-	-	-	-	-	-	-	NB	-	-	-->
+<div class=
+"note ">543210</div>
+
+</center></div>
+
+<div class="float">
+	<font size="+1">
+	<em>Tamam</em>
+		<a href="http://completeword.wordpress.com/2010/08/13/untold-author-interview/
+	">"untold Tales"</a>
+	<br />Seattle
+	<br />Sept 2010
+	</font>
+</div>
+
+<div class="float">
+	<a href="http://pics.tgu.ca">
+	<font color="red" size="+2">All Shows</font></a>
+	<br />
+	<a href="../../../../globals/if-how.htm">UI HowTo</a>
+	<br />
+	<a href="../../../../globals/contact.htm">contact & copyright</a>
+	<br />
+</div>
+
+<br />
+<!--
+<font size="+1">
+-->
+
+<!--
+<hr width="30%" />
+<br /><font size="+3">A mockup with image rotational capabilities...</font>
+<br /><br />
+Use the <b>UI</b> to reSize and reArrange PICS. [keyboard & pointer]
+<br /><font color="red">NB.</font> If the <b>UI</b> loses FOCUS: <b>Click</b>ing on witespace should find it!
+
+<br /><br />[pointer only:]
+<br /><b>Click</b> on a left <font color="red">{</font> to show next image in its subgroup as the FIRST image...
+<br /><b>DoubleClick</b> on a left <font color="red">{</font> to start rotation of images in its subgroup to the FIRST image...
+<br /><b>Click</b> on any right <font color="red">}</font> to end a rotation.
+
+<br /><br /><b>Click</b> on an image to grow. [or to set marker in UI]
+	<br /><b>DoubleClick</b> on an image to web size it. [alternating web to thumb sizes]
+	<br /><b>Set</b> dwell time, thumb, and web sizes in boxes.
+-->
+
+<br />
+	<div class=" float">
+	<img height=250  alt=""  id="full"
+	src="thm/m51009203882p93.jpg"><p>full
+	</div>
+	<div class="focus">:.^.<br />:&lt;.&gt;<br />:.v.<br />:c.s<br /></div>
+<!--
+-->
+
+<br />
+
+dwell time:<input id="dwellin" name="dwell" type="text" value="100"/>
+thumb size:<input id="thumb_set" name="thumb_size" type="text" value="100"/>
+web size:<input id="web_set" name="web_size" type="text" value="450"/>
+
+<!--\q	-	-	-	-	-	-	-	-	-	M O D 2	-	-	-->
+
+<!-- mark grouping	-->
+<div class="mark" id="fi">
+<div class="l">{</div>
+
+	<!-- mark grouping	-->
+	<div class="mark" id="foo">
+	<div class="l">{</div>
+		<div class="pic float"><img height=99  alt=",i:717/5884" id="m51009183522" src="thm/m51009183522.jpg">   <p>m51009183522  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:11/6241"  id="m51009183521" src="thm/m51009183521.jpg"> <p>m51009183521  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:52/121"   id="m51009183525" src="thm/m51009183525.jpg">   <p>m51009183525  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:23/5723"  id="m51009183526" src="thm/m51009183526.jpg">   <p>m51009183526  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:89/7133"  id="m51009183527" src="thm/m51009183527.jpg">   <p>m51009183527  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:338/9696" id="m51009183528" src="thm/m51009183528.jpg">   <p>m51009183528  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:94/6019"  id="m51009183532" src="thm/m51009183532.jpg">   <p>m51009183532  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:814/6448" id="m51009183533" src="thm/m51009183533.jpg">   <p>m51009183533  </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark grouping	-->
+
+	<!-- mark grouping	-->
+	<div class="mark">
+	<div class="l">{</div>
+		<div class="pic float"><img height=99  alt=",i:339/158"  id="m51009203882p93"src="thm/m51009203882p93.jpg"><p>m51009203882p93</div>
+		<div class="pic float"><img height=99  alt=",i:810/2006" id="m51009203883"   src="thm/m51009203883.jpg">   <p>m51009203883  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:6/2043"   id="m51009203883t6" src="thm/m51009203883t6.jpg"> <p>m51009203883t6</p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:412/3497" id="m51009203888"   src="thm/m51009203888.jpg">   <p>m51009203888  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:204/6551" id="m51009203894"   src="thm/m51009203894.jpg">   <p>m51009203894  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:413/782"  id="m51009203908"   src="thm/m51009203908.jpg">   <p>m51009203908  </p><br /></div>
+		<div class="pic float"><img height=99  alt=",i:404/4639" id="m51009203912"   src="thm/m51009203912.jpg">   <p>m51009203912  </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark grouping	-->
+
+<div class="pic float"><img height=99  alt=",i:573/6197" id="m51009203913" src="thm/m51009203913.jpg">   <p>m51009203913  </p><br /></div>
+<div class="pic float"><img height=99  alt=",i:220/600"  id="m71009201379" src="thm/m71009201379.jpg">   <p>m71009201379  </p><br /></div>
+<div class="pic float"><img height=99  alt=",i:819/9166" id="m71009201383" src="thm/m71009201383.jpg">   <p>m71009201383  </p><br /></div>
+<div class="pic float"><img height=99  alt=",i:402/7197" id="m71009201393" src="thm/m71009201393.jpg">   <p>m71009201393  </p><br /></div>
+<div class="pic float"><img height=99  alt=",i:690/5899" id="m71009201396" src="thm/m71009201396.jpg">   <p>m71009201396  </p><br /></div>
+<div class="r">}</div>
+</div><!-- end mark grouping	-->
+
+<!--</font> -->
+</body></html>

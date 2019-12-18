@@ -1,0 +1,27 @@
+/* Title{gh-div} Files{gh-classic.gif} */
+body{
+	font-family: Palatino, Monospace, monotype corsiva, Fantasy;
+}
+div.float {float: left;
+	text-align: center;}  
+div.float p {text-align: center;}
+div.container {
+	}
+div.picture {text-align: center;
+	float: left;
+	}
+div.spacer {clear: both;}
+
+a:active{color: #ff0000;}
+a:link{color: #440;}
+a:visited{color: #040;}
+a:hover{color: #ff0000;}
+p.contents{
+}
+table{border: 5}
+table.indent{}
+td{
+	font-family: Arial, Helvetica, Sans-Serif;
+}
+	font-family: Modern, Frosty, Cursive, Helvetica, monotype_corsiva, courier_new, Arial, Sans-Serif;
+	font-family: Monospace, Palatino, Fantasy;

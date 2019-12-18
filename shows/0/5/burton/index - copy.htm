@@ -1,0 +1,351 @@
+<html><head><title>DUP @ Camp Burton</title>
+<script type="text/javascript" src="../../../../globals/picif.js"></script>
+<!--
+<base href="http://db.tgu.ca/srp/shows/0/5/burton/i.htm">
+-->
+<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<!--
+http://i.tgu.ca/pics-05-burton
+-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+//  picif_start();	// a dup`ed exec...
+  FIRST="OFF";
+  FIRSTSRC="OFF";
+  loop = new Array;
+  time=400;
+  ANYACTION=1;
+  bfr="url('"; aft="')";
+  dwell=2;
+  var FIRSTSRCocc= new Boolean();
+  inc=1;
+  lpl=0;
+  stop=1;
+  $(".pic>img").each(function(){  this.height=99;  });
+
+function run(){
+  $('#targ').delay(1000*dwell).show(1,function(){
+    if(1>stop){
+      inc+=1; if(lpl<inc)inc=1;
+      FIRST.src=loop[inc-1];
+      run();}
+  });
+}
+ $(".r").click(function(event){
+    stop=1;
+    if(FIRSTSRCocc)FIRST.src=FIRSTSRC;
+ });
+
+  $(".l").click(function(event){
+//	alert("FIRSTSRCocc: "+FIRSTSRCocc);
+	if(FIRSTSRCocc)FIRST.src=FIRSTSRC;
+	FIRSTSRCocc=true;
+    loop = new Array;
+	$(this.parentNode).find(".pic:first>img").each(function(){
+		this.setAttribute('id','targ');
+		FIRST=this;  FIRSTSRC=FIRST.src;  });
+	$(this.parentNode).find(".pic>img").each(function(){
+		loop.push(this.src);  });
+		lpl=loop.length;
+		dwell=$("#dwellin").val();
+	stop=0;
+	run();
+   });
+
+
+  $(".input:text:first").focus();
+
+  $(".note").click(function(event){
+    this.innerHTML="\n<br \>lpl="+lpl+"\n<br \>"+this.innerHTML;
+    this.innerHTML="\n<br \>dwell="+dwell+"\n<br \>"+this.innerHTML;
+    this.innerHTML="\n<br \>FIRSTSRC="+FIRSTSRC+"\n<br \>"+this.innerHTML;
+  });
+ });
+</script>
+<style  type="text/css">
+.pic  {font-size: smaller;
+}
+.move  {font-size: 250%;
+}
+.pic img  {//height:108
+}
+.note  {float: left;
+  border: 1px solid
+}
+.l  {float: left;
+	color:red;
+	font-size: 700%;
+	text-align: center;
+}
+.r  {float: left;
+	color:red;
+	font-size: 700%;
+	text-align: center;
+}
+.c	{  font-size: 14%;
+    color:gray;
+}
+.red  {color:red
+}
+</style>
+
+</head>
+<body onload="picif_start();" >
+
+<div class="note"></div>
+
+<img class="thum" align="right" height=200 onDblClick="height=200"
+onClick="height=ff*height;"
+src="http://img204.imageshack.us/img204/4703/m6051104503t5.jpg" alt="">
+
+<div><center>
+<a href="http://i.tgu.ca/pics-05-burton">
+	<font size="+1">
+		http://i.tgu.ca/
+		<br />pics-05-burton
+		</font></a>
+</center></div>
+
+<div class="float">
+	<font size="+1">
+
+		<a href="http://www.campburton.com"><em>DUP @ camp Burton</em></a>
+	<br />Vashon Island WA
+	<br />November 2005
+	<p />
+	</font>
+</div>
+
+<div class="float">
+	<a href="http://pics.tgu.ca">
+	<font color="red" size="+2">All Shows</font></a>
+	<br />
+	<a href="../../../../globals/if-how.htm">UI HowTo</a>
+	<br />
+	<a href="../../../../globals/contact.htm">contact & copyright</a>
+	<br />
+</div>
+
+<br />
+<!--
+<font size="+1">
+-->
+
+<hr width="30%" />
+Use the <b>UI</b> to reSize and reArrange PICS. [keyboard & pointer]
+<br /><span class="red">NB.</span> If the <b>UI</b> loses FOCUS: <b>Click</b>ing on witespace should find it!
+
+<br /><b>Click</b> on a <span class="red">{</span> to rotate its subgroup
+<br /><b>Click</b> on any <span class="red">}</span> to end a rotation.
+<br /><b>Click</b> on an image to grow. [or to set marker in UI]
+<br />Before a rotation <b>Set dwell</b> time in second`s:
+	<input id="dwellin" name="dwell" type="text" value="2" style="background: pink; color: blue;"/>
+<!--
+	<font color="red" size="+2"><input id="dwellin" name="dwell" type="text" value="123"/></font>
+	thumb size:<input id="thumb_set" name="thumb_size" type="text" value="100"/>
+	web size:<input id="web_set" name="web_size" type="text" value="450"/>
+-->
+<hr width="30%" />
+
+<div class="mark">
+<div class="l">{<span class="c">all</span></div>
+
+	<div class="mark">
+	<div class="l">{<span class="c">k</span></div>
+<div class="pic float"><img height=99  alt=   "39/1299"id="m6051102389"src="tss/2/m6051102389.jpg">    <p>m6051102389    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "190/6356"id="m6051102391"src="tss/2/m6051102391.jpg">    <p>m6051102391    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "100/4498"id="m6051102393"src="tss/2/m6051102393.jpg">    <p>m6051102393    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "252/7888"id="m6051102396"src="tss/2/m6051102396.jpg">    <p>m6051102396    </p><br /></div>
+<div class="pic float"><img height=99  alt=    "35/738"id="m6051102397"src="tss/2/m6051102397.jpg">    <p>m6051102397    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "196/5636"id="m6051102399"src="tss/2/m6051102399.jpg">    <p>m6051102399    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "155/4242"id="m6051102401"src="tss/2/m6051102401.jpg">    <p>m6051102401    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "153/4092"id="m6051102405"src="tss/2/m6051102405.jpg">    <p>m6051102405    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "841/8246"id="m6051102407"src="tss/2/m6051102407.jpg">    <p>m6051102407    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "834/1066"id="m6051102409"src="tss/2/m6051102409.jpg">    <p>m6051102409    </p><br /></div>
+<div class="pic float"><img height=99  alt=    "9/2673"id="m6051102411"src="tss/2/m6051102411.jpg">    <p>m6051102411    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "696/4009"id="m6051102415"src="tss/2/m6051102415.jpg">    <p>m6051102415    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "585/5086"id="m6051102417"src="tss/2/m6051102417.jpg">    <p>m6051102417    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "715/8859"id="m6051102418"src="tss/2/m6051102418.jpg">    <p>m6051102418    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "256/1530"id="m6051102420"src="tss/2/m6051102420.jpg">    <p>m6051102420    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "171/3989"id="m6051102422"src="tss/2/m6051102422.jpg">    <p>m6051102422    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark keystone 2nd grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">4</span></div>
+
+		<div class="mark">
+		<div class="l">{<span class="c">su</span></div>
+	<div class="pic float"><img height=99  alt= "20/8034"id=  "m6051104423t4" src= "tss/4/m6051104423t4.jpg">  <p>m6051104423t4  </p><br /></div>
+	<div class="pic float"><img height=99  alt= "831/738"id=  "m6051104425t7" src= "tss/4/m6051104425t7.jpg">  <p>m6051104425t7  </p><br /></div>
+	<div class="pic float"><img height=99  alt=  "810/6017"id="m6051104429"   src= "tss/4/m6051104429.jpg">    <p>m6051104429    </p><br /></div>
+	<div class="pic float"><img height=99  alt=  "824/8733"id="m6051104431"   src= "tss/4/m6051104431.jpg">    <p>m6051104431    </p><br /></div>
+	<div class="pic float"><img height=99  alt=  "848/3898"id="m6051104433"   src= "tss/4/m6051104433.jpg">    <p>m6051104433    </p><br /></div>
+	<div class="pic float"><img height=99  alt=  "4/3765"id  ="m6051104434t5" src= "tss/4/m6051104434t5.jpg">  <p>m6051104434t5  </p><br /></div>
+	<div class="pic float"><img height=99  alt=  "513/3777"id="m6051104436"   src= "tss/4/m6051104436.jpg">    <p>m6051104436    </p><br /></div>
+	<div class="pic float"><img height=99  alt=  "831/9991"id="m6051104452"   src= "tss/4/m6051104452.jpg">    <p>m6051104452    </p><br /></div>
+		<div class="r">}</div>
+		</div><!-- end mark setup grouping	-->
+
+<div class="pic float"><img height=99  alt=   "40/1213"id="m6051104437"   src= "tss/4/m6051104437.jpg">    <p>m6051104437    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "847/4702"id="m6051104438"   src= "tss/4/m6051104438.jpg">    <p>m6051104438    </p><br /></div>
+<div class="pic float"><img height=99  alt=   "11/3045"id="m6051104439"   src= "tss/4/m6051104439.jpg">    <p>m6051104439    </p><br /></div>
+<div class="pic float"><img height=99  alt=     "3/732"id="m6051104440"   src= "tss/4/m6051104440.jpg">    <p>m6051104440    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "528/9620"id="m6051104443"   src= "tss/4/m6051104443.jpg">    <p>m6051104443    </p><br /></div>
+<div class="pic float"><img height=99  alt=   "20/8739"id="m6051104446"   src= "tss/4/m6051104446.jpg">    <p>m6051104446    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "291/8717"id="m6051104458"   src= "tss/4/m6051104458.jpg">    <p>m6051104458    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "832/4860"id="m6051104462"   src= "tss/4/m6051104462.jpg">    <p>m6051104462    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "192/9648"id="m6051104463"   src= "tss/4/m6051104463.jpg">    <p>m6051104463    </p><br /></div>
+<div class="pic float"><img height=99  alt=    "42/548"id="m6051104466"   src= "tss/4/m6051104466.jpg">    <p>m6051104466    </p><br /></div>
+
+<div class="pic float"><img height=99  alt=    "62/3076"id="m6051104467"   src= "tss/4/m6051104467.jpg">    <p>m6051104467    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "819/3187"id="m6051104470"   src= "tss/4/m6051104470.jpg">    <p>m6051104470    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "406/4067"id="m6051104471"   src= "tss/4/m6051104471.jpg">    <p>m6051104471    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "683/5694"id="m6051104484"   src= "tss/4/m6051104484.jpg">    <p>m6051104484    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "715/7272"id="m6051104485"   src= "tss/4/m6051104485.jpg">    <p>m6051104485    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "163/2085"id="m6051104487"   src= "tss/4/m6051104487.jpg">    <p>m6051104487    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "405/7389"id="m6051104492"   src= "tss/4/m6051104492.jpg">    <p>m6051104492    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "269/2518"id="m6051104496"   src= "tss/4/m6051104496.jpg">    <p>m6051104496    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "534/2714"id="m6051104499"   src= "tss/4/m6051104499.jpg">    <p>m6051104499    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "252/6683"id="m6051104500"   src= "tss/4/m6051104500.jpg">    <p>m6051104500    </p><br /></div>
+<div class="pic float"><img height=99  alt=   "33/9607"id="m6051104501"   src= "tss/4/m6051104501.jpg">    <p>m6051104501    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "834/6549"id="m6051104502"   src= "tss/4/m6051104502.jpg">    <p>m6051104502    </p><br /></div>
+<div class="pic float"><img height=99  alt="204/4703"id=  "m6051104503t5"  src="tss/4/m6051104503t5.jpg">  <p>m6051104503t5  </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark 4th grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">5</span></div>
+<div class="pic float"><img height=99  alt=   "200/6836"id="m6051105506.jpg"    src="tss/5/m6051105506.jpg"><p>m6051105506   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "249/2645"id="m6051105507.jpg"    src="tss/5/m6051105507.jpg"><p>m6051105507   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "402/7159"id="m6051105508.jpg"    src="tss/5/m6051105508.jpg"><p>m6051105508   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "546/5200"id="m6051105509.jpg"    src="tss/5/m6051105509.jpg"><p>m6051105509   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "266/4233"id="m6051105510.jpg"    src="tss/5/m6051105510.jpg"><p>m6051105510   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "97/2600"id="m6051105512.jpg"    src="tss/5/m6051105512.jpg"><p>m6051105512   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "189/8503"id="m6051105513.jpg"    src="tss/5/m6051105513.jpg"><p>m6051105513   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "831/6719"id="m6051105515.jpg"    src="tss/5/m6051105515.jpg"><p>m6051105515   </p><br /></div>
+<div class="pic float"><img height=99  alt= "502/2107"id=  "m6051105517t8.jpg"  src="tss/5/m6051105517t8.jpg"><p>m6051105517t8 </p><br /></div>
+<div class="pic float"><img height=99  alt= "265/7654"id=  "m6051105520t1.jpg"  src="tss/5/m6051105520t1.jpg"><p>m6051105520t1 </p><br /></div>
+<div class="pic float"><img height=99  alt=    "80/4585"id="m6051105522.jpg"    src="tss/5/m6051105522.jpg"><p>m6051105522   </p><br /></div>
+
+		<div class="mark">
+		<div class="l">{<span class="c">ex</span></div>
+	<div class="pic float"><img height=99  alt= "847/9560"id=  "m6051105525t7.jpg"  src="tss/5/m6051105525t7.jpg"><p>m6051105525t7 </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "171/6843"id="m6051105528.jpg"    src="tss/5/m6051105528.jpg"><p>m6051105528   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "577/3218"id="m6051105530.jpg"    src="tss/5/m6051105530.jpg"><p>m6051105530   </p><br /></div>
+	<div class="pic float"><img height=99  alt=     "5/8762"id="m6051105534.jpg"    src="tss/5/m6051105534.jpg"><p>m6051105534   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "708/9412"id="m6051105539.jpg"    src="tss/5/m6051105539.jpg"><p>m6051105539   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "839/1802"id="m6051105542.jpg"    src="tss/5/m6051105542.jpg"><p>m6051105542   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "825/5159"id= "m6051105544.jpg"   src="tss/5/m6051105544.jpg"><p>"m6051105544  </p><br /></div>
+	<div class="pic float"><img height=99  alt=    "834/597"id="m6051105546.jpg"    src="tss/5/m6051105546.jpg"><p>m6051105546   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "638/2954"id="m6051105549.jpg"    src="tss/5/m6051105549.jpg"><p>m6051105549   </p><br /></div>
+	<div class="pic float"><img height=99  alt=    "526/191"id="m6051105551.jpg"    src="tss/5/m6051105551.jpg"><p>m6051105551   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "196/1470"id="m6051105553.jpg"    src="tss/5/m6051105553.jpg"><p>m6051105553   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "689/2307"id="m6051105558.jpg"    src="tss/5/m6051105558.jpg"><p>m6051105558   </p><br /></div>
+	<div class="pic float"><img height=99  alt=    "27/8955"id="m6051105561.jpg"    src="tss/5/m6051105561.jpg"><p>m6051105561   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "221/9937"id="m6051105562.jpg"    src="tss/5/m6051105562.jpg"><p>m6051105562   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "412/3069"id="m6051105554.jpg"    src="tss/5/m6051105554.jpg"><p>m6051105554   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "809/3791"id="m6051105555.jpg"    src="tss/5/m6051105555.jpg"><p>m6051105555   </p><br /></div>
+	<div class="pic float"><img height=99  alt=      "9/899"id="m6051105569.jpg"    src="tss/5/m6051105569.jpg"><p>m6051105569   </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "443/1245"id="m6051105570.jpg"    src="tss/5/m6051105570.jpg"><p>m6051105570   </p><br /></div>
+		<div class="r">}</div>
+		</div><!-- end mark exercise grouping	-->
+
+<div class="pic float"><img height=99  alt=   "830/8310"id="m6051105572.jpg"    src="tss/5/m6051105572.jpg"><p>m6051105572   </p><br /></div>
+<div class="pic float"><img height=99  alt=  "72/2425"id=  "m6051105573t8.jpg"  src="tss/5/m6051105573t8.jpg"><p>m6051105573t8 </p><br /></div>
+<div class="pic float"><img height=99  alt=   "847/5903"id="m6051105580.jpg"    src="tss/5/m6051105580.jpg"><p>m6051105580   </p><br /></div>
+<div class="pic float"><img height=99  alt=     "8/9808"id="m6051105582.jpg"    src="tss/5/m6051105582.jpg"><p>m6051105582   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "690/5879"id="m6051105585.jpg"    src="tss/5/m6051105585.jpg"><p>m6051105585   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "10/2972"id="m6051105597.jpg"    src="tss/5/m6051105597.jpg"><p>m6051105597   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "17/7317"id="m6051105600.jpg"    src="tss/5/m6051105600.jpg"><p>m6051105600   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "823/9388"id="m6051105606.jpg"    src="tss/5/m6051105606.jpg"><p>m6051105606   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "231/7450"id="m6051105612.jpg"    src="tss/5/m6051105612.jpg"><p>m6051105612   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "192/7002"id="m6051105618.jpg"    src="tss/5/m6051105618.jpg"><p>m6051105618   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "32/6946"id="m6051105623.jpg"    src="tss/5/m6051105623.jpg"><p>m6051105623   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "828/4807"id="m6051105628.jpg"    src="tss/5/m6051105628.jpg"><p>m6051105628   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "832/6785"id= "m6051105631.jpg"   src="tss/5/m6051105631.jpg"><p>m6051105631  </p><br /></div>
+<div class="pic float"><img height=99  alt=   "685/6838"id="m6051105636.jpg"    src="tss/5/m6051105636.jpg"><p>m6051105636   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "822/2228"id="m6051105642.jpg"    src="tss/5/m6051105642.jpg"><p>m6051105642   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "696/1080"id="m6051105645.jpg"    src="tss/5/m6051105645.jpg"><p>m6051105645   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "818/6020"id="m6051105647.jpg"    src="tss/5/m6051105647.jpg"><p>m6051105647   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "708/1838"id="m6051105653.jpg"    src="tss/5/m6051105653.jpg"><p>m6051105653   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "708/8392"id="m6051105656.jpg"    src="tss/5/m6051105656.jpg"><p>m6051105656   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "821/2518"id="m6051105658.jpg"    src="tss/5/m6051105658.jpg"><p>m6051105658   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "511/8923"id="m6051105664.jpg"    src="tss/5/m6051105664.jpg"><p>m6051105664   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "26/7296"id="m6051105665.jpg"    src="tss/5/m6051105665.jpg"><p>m6051105665   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "233/2460"id="m6051105668.jpg"    src="tss/5/m6051105668.jpg"><p>m6051105668   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "811/2048"id="m6051105669.jpg"    src="tss/5/m6051105669.jpg"><p>m6051105669   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "189/8818"id="m6051105673.jpg"    src="tss/5/m6051105673.jpg"><p>m6051105673   </p><br /></div>
+<div class="pic float"><img height=99  alt= "197/2162"id=  "m6051105675t7.jpg"  src="tss/5/m6051105675t7.jpg"><p>m6051105675t7 </p><br /></div>
+<div class="pic float"><img height=99  alt= "210/4139"id=  "m6051105678t3.jpg"  src="tss/5/m6051105678t3.jpg"><p>m6051105678t3 </p><br /></div>
+<div class="pic float"><img height=99  alt=   "573/2123"id="m6051105684.jpg"    src="tss/5/m6051105684.jpg"><p>m6051105684   </p><br /></div>
+<div class="pic float"><img height=99  alt=     "31/362"id="m6051105687.jpg"    src="tss/5/m6051105687.jpg"><p>m6051105687   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "526/391"id="m6051105690.jpg"    src="tss/5/m6051105690.jpg"><p>m6051105690   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "338/525"id="m6051105691.jpg"    src="tss/5/m6051105691.jpg"><p>m6051105691   </p><br /></div>
+<div class="pic float"><img height=99  alt= "849/3488"id= "m6051105692t3.jpg"   src="tss/5/m6051105692t3.jpg"><p>6051105692t3  </p><br /></div>
+<div class="pic float"><img height=99  alt=   "856/7924"id="m6051105694.jpg"    src="tss/5/m6051105694.jpg"><p>m6051105694   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "42/9278"id="m6051105698.jpg"    src="tss/5/m6051105698.jpg"><p>m6051105698   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "94/5484"id="m6051105699.jpg"    src="tss/5/m6051105699.jpg"><p>m6051105699   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "689/1808"id="m6051105701.jpg"    src="tss/5/m6051105701.jpg"><p>m6051105701   </p><br /></div>
+<div class="pic float"><img height=99  alt=     "6/1764"id="m6051105706.jpg"    src="tss/5/m6051105706.jpg"><p>m6051105706   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "442/6747"id="m6051105707.jpg"    src="tss/5/m6051105707.jpg"><p>m6051105707   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "231/8139"id="m6051105709.jpg"    src="tss/5/m6051105709.jpg"><p>m6051105709   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "189/343"id="m6051105711.jpg"    src="tss/5/m6051105711.jpg"><p>m6051105711   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "714/9611"id="m6051105713.jpg"    src="tss/5/m6051105713.jpg"><p>m6051105713   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "820/2526"id="m6051105721.jpg"    src="tss/5/m6051105721.jpg"><p>m6051105721   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "695/8696"id="m6051105722.jpg"    src="tss/5/m6051105722.jpg"><p>m6051105722   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "638/7456"id="m6051105727.jpg"    src="tss/5/m6051105727.jpg"><p>m6051105727   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "17/7034"id="m6051105730.jpg"    src="tss/5/m6051105730.jpg"><p>m6051105730   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "825/2707"id="m6051105733.jpg"    src="tss/5/m6051105733.jpg"><p>m6051105733   </p><br /></div>
+<div class="pic float"><img height=99  alt=    "84/9061"id="m6051105741.jpg"    src="tss/5/m6051105741.jpg"><p>m6051105741   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "232/1276"id="m6051105746.jpg"    src="tss/5/m6051105746.jpg"><p>m6051105746   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "338/5972"id="m6051105747.jpg"    src="tss/5/m6051105747.jpg"><p>m6051105747   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "163/6596"id="m6051105750.jpg"    src="tss/5/m6051105750.jpg"><p>m6051105750   </p><br /></div>
+<div class="pic float"><img height=99  alt=   "249/5428"id="m6051105752.jpg"    src="tss/5/m6051105752.jpg"><p>m6051105752   </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark 5th grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">6</span></div>
+<div class="pic float"><img height=99  alt=   "23/7742"id="m6051106754    "src="tss/6/m6051106754.jpg"><p>m6051106754    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "847/3074"id="m6051106755    "src="tss/6/m6051106755.jpg"><p>m6051106755    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "204/8291"id="m6051106756    "src="tss/6/m6051106756.jpg"><p>m6051106756    </p><br /></div>
+<div class="pic float"><img height=99  alt="191/7569"id=  "m6051106758p9"  src="tss/6/m6051106758p9.jpg"><p>m6051106758p9  </p><br /></div>
+<div class="pic float"><img height=99  alt="830/3976"id=  "m6051106760t7"  src="tss/6/m6051106760t7.jpg"><p>m6051106760t7  </p><br /></div>
+<div class="pic float"><img height=99  alt=  "641/7314"id="m6051106768"    src="tss/6/m6051106768.jpg"><p>m6051106768    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "848/8215"id="m6051106769"    src="tss/6/m6051106769.jpg"><p>m6051106769    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "444/7015"id="m6051106771"    src="tss/6/m6051106771.jpg"><p>m6051106771    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "805/8828"id="m6051106776"    src="tss/6/m6051106776.jpg"><p>m6051106776    </p><br /></div>
+<div class="pic float"><img height=99  alt=   "28/8623"id="m6051106777"    src="tss/6/m6051106777.jpg"><p>m6051106777    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "513/3811"id="m6051106780"    src="tss/6/m6051106780.jpg"><p>m6051106780    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "511/7563"id="m6051106782"    src="tss/6/m6051106782.jpg"><p>m6051106782    </p><br /></div>
+<div class="pic float"><img height=99  alt=    "9/5537"id="m6051106784"    src="tss/6/m6051106784.jpg"><p>m6051106784    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "834/8165"id="m6051106789"    src="tss/6/m6051106789.jpg"><p>m6051106789    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "257/1363"id="m6051106792"    src="tss/6/m6051106792.jpg"><p>m6051106792    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "839/4168"id="m6051106794"    src="tss/6/m6051106794.jpg"><p>m6051106794    </p><br /></div>
+<div class="pic float"><img height=99  alt=  "717/3555"id="m6051106797"    src="tss/6/m6051106797.jpg"><p>m6051106797    </p><br /></div>
+
+		<div class="mark">
+		<div class="l">{<span class="c">demo</span></div>
+	<div class="pic float"><img height=99  alt=  "546/8213"id="m6051106802"    src="tss/6/m6051106802.jpg"><p>m6051106802    </p><br /></div>
+	<div class="pic float"><img height=99  alt=  "850/3769"id="m6051106803"    src="tss/6/m6051106803.jpg"><p>m6051106803    </p><br /></div>
+	<div class="pic float"><img height=99  alt=   "21/1917"id="m6051106807"    src="tss/6/m6051106807.jpg"><p>m6051106807    </p><br /></div>
+	<div class="pic float"><img height=99  alt=  "846/8933"id="m6051106808"    src="tss/6/m6051106808.jpg"><p>m6051106808    </p><br /></div>
+	<div class="pic float"><img height=99  alt=  "696/1401"id="m6051106809"    src="tss/6/m6051106809.jpg"><p>m6051106809    </p><br /></div>
+	<div class="pic float"><img height=99  alt=  "820/6125"id="m6051106810"    src="tss/6/m6051106810.jpg"><p>m6051106810    </p><br /></div>
+		<div class="r">}</div>
+		</div><!-- end mark demo grouping	-->
+
+<div class="pic float"><img height=99  alt=  "259/1789"id="m6051106811"    src="tss/6/m6051106811.jpg"><p>m6051106811    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark 6th grouping	-->
+
+<div class="r">}</div>
+</div><!-- end mark all grouping	-->
+
+<!--</font>
+-->
+</body></html>

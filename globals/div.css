@@ -1,0 +1,143 @@
+<\ d="10-10-13" t="2:27 pm"><\/>
+</\><\ d="10-01-30" t="1:44 PM"><\/>
+<\ d="10-01-09" t="9:46 pm"><\/>
+
+.pic  {font-size: smaller;
+  }
+.move  {font-size: 250%;
+  }
+.pic img  {//height:108
+}
+.note  {float: left;
+    color:green;
+  border: 1px solid}
+.l  {float: left;
+    color:red;
+  font-size: 700%;
+  text-align: center;}
+.r  {float: left;
+    color:red;
+  font-size: 700%;
+  text-align: center;}
+.cnb  {//color:red
+}
+
+body{
+	font-family: Palatino, Monospace, monotype corsiva, Fantasy;
+}
+body{
+	color: #000;
+	font-family: Arial, Helvetica, Sans-Serif;
+	background: #fff;
+	margin-top: 0px;
+}
+div.pic {float: left;
+	color:black;
+	border: 1px dashed #100;
+	text-align: center;}  
+div.pic p {text-align: center;}
+div.idx {float: left;
+	text-align: center;
+	border: 1px dashed #0c0;
+	}
+div.head {float: right;
+	color:black;
+	border: 2px solid #100;
+	text-align: center;}  
+
+ol
+{
+  float: left;
+  width: 24em;  /* accommodate the widest item */
+  color: black;
+  background-color: lightgray;
+}
+
+img {border: none;}
+div.fl {float: left;}
+div.fr {float: right;}
+div.z{
+	border: 1px solid #c00;
+	}
+div.container {
+	}
+div.picture {text-align: center;
+	float: left;
+	}
+div.spacer {clear: both;}
+
+a:active{color: #ff0000;}
+a:link{color: #440;}
+a:visited{color: #040;}
+a:hover{color: #ff0000;}
+p.contents{
+}
+table{border: 5}
+table.indent{}
+td{
+	font-family: Arial, Helvetica, Sans-Serif;
+}
+
+<!-- background: #808080 url(gh-classic.gif) repeat-y;
+<script language="javascript">
+ff=1.1; gw=133; gt=99;
+</script>
+-->
+body.contents{
+	background: #eee;
+	margin-left: 5px;
+}
+
+img.x	{border: 1px dashed #b00;}
+
+img.y	{border: 3px ridge #e00;}
+
+
+div.container {
+	border: 6px dashed #333;
+	background-color: #999;}
+div.picture {text-align: center;
+	float: left;
+	border: 5px dashed #fff;
+	background-color: white;
+	text-color: black;
+	}
+div.spacer {clear: both;}
+
+a:active{color: #ff0000;}
+a:link{color: #440;}
+a:visited{color: #040;}
+a:hover{color: #ff0000;}
+p.contents{
+	font-size: x-small;
+	font-weight: normal;
+	text-align: left;
+}
+table.indent{margin-left: 260px;}
+td.image{background-color: #ffffff;}
+td.thumb{
+	font-size: x-small;
+	font-weight: normal;
+	text-align: center;
+}
+td.title{font-weight: bold;}
+td.info{font-weight: bold;}
+td.small{
+	font-size: small;
+	font-style: italic;}
+img.contents{border: thin solid #ffffff;}
+img.thum{border-color: red ;
+	wwidth: 133px}
+img.thumb{border: 0 solid #ffffff;
+	onClick: width=ff*width;
+	width: 133px}
+img.main{border: thick solid #ffffff;}
+.thickborder{border: thick solid #ffffff;}
+.center{text-align: center;}
+
+table.cc{table-layout: auto;
+	float: left;
+	border: ridge;
+	text-align: center;
+	background-color: lightblue;}
+td.cc{background-color: blue;}

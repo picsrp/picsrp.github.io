@@ -1,0 +1,85 @@
+<html><head><title>reSize & reArrange</title>
+
+
+<link href="div.css" rel="stylesheet" type="text/css" />
+</head><body>
+
+<table align="right" border=0>
+<tr><td align="middle">
+<em><font size="+1">
+<font color="green">How-To UI</font></font></em>
+</td></tr></table>
+
+<h2>reSize & reArrange</h2>
+
+<a href="javascript:history.back()">
+<center>
+<hr width=35%/>
+RETURN<br/><hr width=35%/>
+</center>
+</a>
+
+<table align="right" border=1>
+<tr><td align="middle">
+<em><font size="+1">
+<font color="green">...Examples...</font></br>
+to Change a pic</font></em>
+</td></tr></table>
+
+<ul>
+	<li/><em>Drag ~</em> to new place
+	<li/><em>small ~</em> Click & type "T"
+	<li/><em>enlarge ~</em> Click & type "W" Depending on border, X and/or Y may be available.
+	<li/><em>Web size all ~</em> type "W" after select all: rightward gesture on first image
+</ul>
+
+<table align="right" border=1>
+<tr><td align="middle">
+<em><font size="+1">
+<font color="green">Details: </font>
+Changing a pic</font></em>
+</td></tr></table>
+
+<PRE STYLE="font-size: small; font-family:'comic sans ms'">
+
+<font size="+1">
+MOUSE GESTURES:
+	<em><font color="green">MARKING</font></em></font>
+<b>drag</b>	move pic to dest
+<b>click</b>	specific pic
+<b>l2r</b>	gesture for pics below it
+<b>r2l</b>	gesture for pics above it
+<font size="+1">
+KEY STROKES:
+	<em><font color="green">ACTIONS</font></em></font>
+<b>f l</b>	<em>F</em>irst <em>L</em>ast ... send
+	(marked selection) to
+<b>g s</b>	<em>G</em>row <em>S</em>hrink    [Those with
+	solid <font color=red>red</font> border can grow
+	very large w/o getting fuzzy.
+	WARNING: can take a lot of
+	bandwidth and CPU]
+<b>w t</b>	<em>W</em>eb <em>T</em>humb ... sizing
+<b>u d a</b>	<em>U</em>n/<em>D</em>elete <em>A</em>ll: of deleted stack
+</pre>
+
+</font>
+<hr width=35%/>
+
+
+<table align="right" border=1>
+<tr><td align="middle">
+<em><font size="+1">
+<font color="green">...IE...</font></br>
+Internet Explorer</font></em>
+</td></tr></table>
+
+<font size="-1">
+<h2>Internet Explorer</h2>
+If you are on a machine which only has this browser - this interface has a significant, but not quite grippling limitation (due to my inability to find how the IE model breaks, in this case, with the standard).
+<p/><u>Limitation</u>: All <font color=red>drags</font> and <font color=red>gestures</font> must be inside and to <font color=red>TEXT</font> of the "div" (marked by a box). This means that most mark gestures will be so limited. Simple clicks are unaffected.
+<p/>Other problems will inevitably crop up (IE is very different from the standard), eg bad fonts, overlapping text etc - i cannot trace down and make allowances for all IE's special needs. So they will just have to remain.
+<p/>For these reasons it is much easier to use FireFox, Opera, Chrome, Safari etc rather than IE. Here is a link to <a href="http://www.mozilla.com/en-US">FireFox</a>.
+
+</font> </body> </html>
+

@@ -1,0 +1,395 @@
+<html><head><title>Shabda & Tamam</title>
+<base href="http://db.tgu.ca/srp/shows/1/0/shabda/i.htm">
+<script type="text/javascript" src="../../../../globals/wpicif.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+<script type="text/javascript" src="../../../../globals/picif.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<!--
+http://i.tgu.ca/pics-10-tamam
+http://i.tgu.ca/pics-10-shabda
+-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  picif_start();
+  FIRST="OFF";
+  FIRSTSRC="OFF";
+  loop = new Array;
+  time=400;
+  ANYACTION=1;
+  bfr="url('"; aft="')";
+  dwell=2;
+  var FIRSTSRCocc= new Boolean();
+  inc=1;
+  lpl=0;
+  stop=1;
+  $(".pic>img").each(function(){  this.height=99;  });
+
+function run(){
+  $('#targ').delay(1000*dwell).show(1,function(){
+    if(1>stop){
+      inc+=1; if(lpl<inc)inc=1;
+      FIRST.src=loop[inc-1];
+      run();}
+  });
+}
+ $(".r").click(function(event){
+    stop=1;
+    if(FIRSTSRCocc)FIRST.src=FIRSTSRC;
+ });
+
+  $(".l").click(function(event){
+//	alert("FIRSTSRCocc: "+FIRSTSRCocc);
+	if(FIRSTSRCocc)FIRST.src=FIRSTSRC;
+	FIRSTSRCocc=true;
+    loop = new Array;
+	$(this.parentNode).find(".pic:first>img").each(function(){
+		this.setAttribute('id','targ');
+		FIRST=this;  FIRSTSRC=FIRST.src;  });
+	$(this.parentNode).find(".pic>img").each(function(){
+		loop.push(this.src);  });
+		lpl=loop.length;
+		dwell=$("#dwellin").val();
+	stop=0;
+	run();
+   });
+
+
+  $(".input:text:first").focus();
+
+  $(".note").click(function(event){
+    this.innerHTML="\n<br \>lpl="+lpl+"\n<br \>"+this.innerHTML;
+    this.innerHTML="\n<br \>dwell="+dwell+"\n<br \>"+this.innerHTML;
+    this.innerHTML="\n<br \>FIRSTSRC="+FIRSTSRC+"\n<br \>"+this.innerHTML;
+  });
+ });
+</script>
+<style  type="text/css">
+.pic  {font-size: smaller;
+}
+.move  {font-size: 250%;
+}
+.pic img  {//height:108
+}
+.note  {float: left;
+  border: 1px solid
+}
+.l  {float: left;
+	color:red;
+	font-size: 700%;
+	text-align: center;
+}
+.r  {float: left;
+	color:red;
+	font-size: 700%;
+	text-align: center;
+}
+.c	{  font-size: 14%;
+    color:gray;
+}
+.red  {color:red
+}
+</style>
+
+</head>
+<body onload="picif_start();" >
+
+<!--	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	NB	-	-	-->
+
+<div class="note"></div>
+
+<img class="thum" align="right" height=250 onDblClick="height=250"
+onClick="height=ff*height;"
+src="http://img607.imageshack.us/img607/2612/m71009171125t7.jpg" alt="">
+
+<img class="thum" align="right" height=250 onDblClick="height=250"
+onClick="height=ff*height;"
+src="http://img695.imageshack.us/img695/5599/m51009193787.jpg" alt="">
+
+<div><center>
+<a href="http://i.tgu.ca/pics-10-shabda">
+	<font size="+1">
+		http://i.tgu.ca/
+		<br />pics-10-shabda
+		</font></a>
+</center></div>
+
+<div class="float">
+	<font size="+1">
+
+		<a href="http://www.marinsufis.com/"><em>Ruhaniat Pir Shabda Khan</em></a>
+		and <a href="http://completeword.wordpress.com/2010/08/13/untold-author-interview">Tamam</a>
+	<br />Seattle
+	<br />Sept 2010
+	</font>
+</div>
+
+<div class="float">
+	<a href="http://pics.tgu.ca">
+	<font color="red" size="+2">All Shows</font></a>
+	<br />
+	<a href="../../../../globals/if-how.htm">UI HowTo</a>
+	<br />
+	<a href="../../../../globals/contact.htm">contact & copyright</a>
+	<br />
+</div>
+
+<br />
+<!--
+<font size="+1">
+-->
+
+<hr width="30%" />
+Use the <b>UI</b> to reSize and reArrange PICS. [keyboard & pointer]
+<br /><span class="red">NB.</span> If the <b>UI</b> loses FOCUS: <b>Click</b>ing on witespace should find it!
+
+<br /><b>Click</b> on a <span class="red">{</span> to rotate its subgroup
+<br /><b>Click</b> on any <span class="red">}</span> to end a rotation.
+<br /><b>Click</b> on an image to grow. [or to set marker in UI]
+<br />Before a rotation <b>Set dwell</b> time as second`s:
+	<input id="dwellin" name="dwell" type="text" value="1" style="background: pink; color: blue;"/>
+<!--
+	<font color="red" size="+2"><input id="dwellin" name="dwell" type="text" value="123"/></font>
+	thumb size:<input id="thumb_set" name="thumb_size" type="text" value="100"/>
+	web size:<input id="web_set" name="web_size" type="text" value="450"/>
+-->
+<hr width="30%" />
+
+<div class="mark">
+<div class="l">{<span class="c">all</span></div>
+
+<div class="mark">
+<div class="l">{<span class="c">key</span></div>
+
+	<div class="mark">
+	<div class="l">{<span class="c">rm</span></div>
+		<div class="pic float"><img height=99  alt="713/1543"id="m51009173121t4"  src="thm/m51009173121t4.jpg">  <p>m51009173121t4  </p><br /></div>
+		<div class="pic float"><img height=99  alt="163/7598"id="m51009173126t0"  src="thm/m51009173126t0.jpg">  <p>m51009173126t0  </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark room grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">ctr</span></div>
+		<div class="pic float"><img height=99  alt="641/3091"id="m71009171100p1"  src="thm/m71009171100p1.jpg">  <p>m71009171100p1  </p><br /></div>
+		<div class="pic float"><img height=99  alt="28/3489" id="m71009171123"    src="thm/m71009171123.jpg">    <p>m71009171123    </p><br /></div>
+		<div class="pic float"><img height=99  alt="607/2612"id="m71009171125t7"  src="thm/m71009171125t7.jpg">  <p>m71009171125t7  </p><br /></div>
+		<div class="pic float"><img height=99  alt="155/852" id="m71009171132"    src="thm/m71009171132.jpg">    <p>m71009171132    </p><br /></div>
+		<div class="pic float"><img height=99  alt="828/8208"id="m71009171138"    src="thm/m71009171138.jpg">    <p>m71009171138    </p><br /></div>
+		<div class="pic float"><img height=99  alt="841/6703"id="m71009171141"    src="thm/m71009171141.jpg">    <p>m71009171141    </p><br /></div>
+
+		<div class="pic float"><img height=99  alt="835/7915"id="m51009173140"    src="thm/m51009173140.jpg">    <p>m51009173140    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark center grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">ppl</span></div>
+		<div class="pic float"><img height=99  alt="842/3400"id="m51009173143"    src="thm/m51009173143.jpg">    <p>m51009173143    </p><br /></div>
+		<div class="pic float"><img height=99  alt="15/6107" id="m51009173145"    src="thm/m51009173145.jpg">    <p>m51009173145    </p><br /></div>
+		<div class="pic float"><img height=99  alt="546/9895"id="m51009173146"    src="thm/m51009173146.jpg">    <p>m51009173146    </p><br /></div>
+		<div class="pic float"><img height=99  alt="841/5258"id="m51009173147"    src="thm/m51009173147.jpg">    <p>m51009173147    </p><br /></div>
+		<div class="pic float"><img height=99  alt="843/6045"id="m51009173149"    src="thm/m51009173149.jpg">    <p>m51009173149    </p><br /></div>
+		<div class="pic float"><img height=99  alt="834/2508"id="m51009173150"    src="thm/m51009173150.jpg">    <p>m51009173150    </p><br /></div>
+		<div class="pic float"><img height=99  alt="69/9452" id="m51009173152"    src="thm/m51009173152.jpg">    <p>m51009173152    </p><br /></div>
+		<div class="pic float"><img height=99  alt="196/333" id="m51009173154"    src="thm/m51009173154.jpg">    <p>m51009173154    </p><br /></div>
+		<div class="pic float"><img height=99  alt="18/7007" id="m51009173155p6p8"src="thm/m51009173155p6p8.jpg"><p>m51009173155p6p8</p><br /></div>
+		<div class="pic float"><img height=99  alt="847/7691"id="m51009173159"    src="thm/m51009173159.jpg">    <p>m51009173159    </p><br /></div>
+		<div class="pic float"><img height=99  alt="24/8416" id="m51009173161"    src="thm/m51009173161.jpg">    <p>m51009173161    </p><br /></div>
+		<div class="pic float"><img height=99  alt="153/6571"id="m51009173166"    src="thm/m51009173166.jpg">    <p>m51009173166    </p><br /></div>
+		<div class="pic float"><img height=99  alt="88/6492" id="m51009173168"    src="thm/m51009173168.jpg">    <p>m51009173168    </p><br /></div>
+		<div class="pic float"><img height=99  alt="35/8051" id="m51009173172"    src="thm/m51009173172.jpg">    <p>m51009173172    </p><br /></div>
+		<div class="pic float"><img height=99  alt="98/6149" id="m51009173174"    src="thm/m51009173174.jpg">    <p>m51009173174    </p><br /></div>
+		<div class="pic float"><img height=99  alt="190/2571"id="m51009173175"    src="thm/m51009173175.jpg">    <p>m51009173175    </p><br /></div>
+		<div class="pic float"><img height=99  alt="11/5696" id="m51009173178t9"  src="thm/m51009173178t9.jpg">  <p>m51009173178t9  </p><br /></div>
+		<div class="pic float"><img height=99  alt="580/752" id="m51009173180"    src="thm/m51009173180.jpg">    <p>m51009173180    </p><br /></div>
+		<div class="pic float"><img height=99  alt="94/6038" id="m51009173182"    src="thm/m51009173182.jpg">    <p>m51009173182    </p><br /></div>
+		<div class="pic float"><img height=99  alt="836/3554"id="m51009173184"    src="thm/m51009173184.jpg">    <p>m51009173184    </p><br /></div>
+		<div class="pic float"><img height=99  alt="405/9194"id="m71009171071"    src="thm/m71009171071.jpg">    <p>m71009171071    </p><br /></div>
+		<div class="pic float"><img height=99  alt="842/2338"id="m71009171072"    src="thm/m71009171072.jpg">    <p>m71009171072    </p><br /></div>
+		<div class="pic float"><img height=99  alt="24/9137" id="m71009171074"    src="thm/m71009171074.jpg">    <p>m71009171074    </p><br /></div>
+		<div class="pic float"><img height=99  alt="831/2928"id="m71009171075"    src="thm/m71009171075.jpg">    <p>m71009171075    </p><br /></div>
+		<div class="pic float"><img height=99  alt="190/4695"id="m71009171082"    src="thm/m71009171082.jpg">    <p>m71009171082    </p><br /></div>
+		<div class="pic float"><img height=99  alt="18/2592" id="m71009171086"    src="thm/m71009171086.jpg">    <p>m71009171086    </p><br /></div>
+		<div class="pic float"><img height=99  alt="155/1721"id="m71009171088"    src="thm/m71009171088.jpg">    <p>m71009171088    </p><br /></div>
+		<div class="pic float"><img height=99  alt="31/9231" id="m71009171091p2"  src="thm/m71009171091p2.jpg">  <p>m71009171091p2  </p><br /></div>
+		<div class="pic float"><img height=99  alt="225/8562"id="m71009171092"    src="thm/m71009171092.jpg">    <p>m71009171092    </p><br /></div>
+		<div class="pic float"><img height=99  alt="839/3181"id="m71009171096"    src="thm/m71009171096.jpg">    <p>m71009171096    </p><br /></div>
+
+		<div class="pic float"><img height=99  alt="708/230" id="m71009171103p5"  src="thm/m71009171103p5.jpg">  <p>m71009171103p5  </p><br /></div>
+		<div class="pic float"><img height=99  alt="684/8400"id="m71009171105"    src="thm/m71009171105.jpg">    <p>m71009171105    </p><br /></div>
+		<div class="pic float"><img height=99  alt="824/8950"id="m71009171109"    src="thm/m71009171109.jpg">    <p>m71009171109    </p><br /></div>
+		<div class="pic float"><img height=99  alt="41/344"  id="m71009171111"    src="thm/m71009171111.jpg">    <p>m71009171111    </p><br /></div>
+		<div class="pic float"><img height=99  alt="833/9966"id="m71009171115"    src="thm/m71009171115.jpg">    <p>m71009171115    </p><br /></div>
+		<div class="pic float"><img height=99  alt="828/8871"id="m71009171116"    src="thm/m71009171116.jpg">    <p>m71009171116    </p><br /></div>
+		<div class="pic float"><img height=99  alt="844/8150"id="m71009171120"    src="thm/m71009171120.jpg">    <p>m71009171120    </p><br /></div>
+		<div class="pic float"><img height=99  alt="18/2452" id="m71009171121"    src="thm/m71009171121.jpg">    <p>m71009171121    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark key people grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">lec</span></div>
+		<div class="pic float"><img height=99  alt="200/5400"id="m71009171129"    src="thm/m71009171129.jpg">    <p>m71009171129    </p><br /></div>
+		<div class="pic float"><img height=99  alt="8/5826"  id="m71009171166p8"  src="thm/m71009171166p8.jpg">  <p>m71009171166p8  </p><br /></div>
+		<div class="pic float"><img height=99  alt="705/4012"id="m71009171198p9"  src="thm/m71009171198p9.jpg">  <p>m71009171198p9  </p><br /></div>
+		<div class="pic float"><img height=99  alt="854/6118"id="m71009171203"    src="thm/m71009171203.jpg">    <p>m71009171203    </p><br /></div>
+		<div class="pic float"><img height=99  alt="855/1563"id="m71009171206"    src="thm/m71009171206.jpg">    <p>m71009171206    </p><br /></div>
+		<div class="pic float"><img height=99  alt="813/1549"id="m71009171208"    src="thm/m71009171208.jpg">    <p>m71009171208    </p><br /></div>
+		<div class="pic float"><img height=99  alt="696/2277"id="m71009171210"    src="thm/m71009171210.jpg">    <p>m71009171210    </p><br /></div>
+		<div class="pic float"><img height=99  alt="823/5857"id="m71009171212"    src="thm/m71009171212.jpg">    <p>m71009171212    </p><br /></div>
+		<div class="pic float"><img height=99  alt="691/9681"id="m71009171220"    src="thm/m71009171220.jpg">    <p>m71009171220    </p><br /></div>
+		<div class="pic float"><img height=99  alt="823/6870"id="m71009171224"    src="thm/m71009171224.jpg">    <p>m71009171224    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark more key lecture grouping	-->
+<div class="r">}</div>
+</div><!-- end mark keystone grouping	-->
+
+<div class="mark">
+<div class="l">{<span class="c">ioof</span></div>
+	<div class="mark">
+	<div class="l">{<span class="c">icr</span></div>
+		<div class="pic float"><img height=99  alt="829/6391"id="m51009183187t0"  src="thm/m51009183187t0.jpg">  <p>m51009183187t0  </p><br /></div>
+		<div class="pic float"><img height=99  alt="842/8382"id="m51009183187t9"  src="thm/m51009183187t9.jpg">  <p>m51009183187t9  </p><br /></div>
+		<div class="pic float"><img height=99  alt="23/3246" id="m51009183193t4"  src="thm/m51009183193t4.jpg">  <p>m51009183193t4  </p><br /></div>
+		<div class="pic float"><img height=99  alt="545/4004"id="m51009183196t8"  src="thm/m51009183196t8.jpg">  <p>m51009183196t8  </p><br /></div>
+		<div class="pic float"><img height=99  alt="546/5788"id="m51009183199"    src="thm/m51009183199.jpg">    <p>m51009183199    </p><br /></div>
+		<div class="pic float"><img height=99  alt="546/7043"id="m51009183202"    src="thm/m51009183202.jpg">    <p>m51009183202    </p><br /></div>
+		<div class="pic float"><img height=99  alt="849/6817"id="m51009183203"    src="thm/m51009183203.jpg">    <p>m51009183203    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark ioof circle grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">ipl</span></div>
+		<div class="pic float"><img height=99  alt="202/1415"id="m51009183206"    src="thm/m51009183206.jpg">    <p>m51009183206    </p><br /></div>
+		<div class="pic float"><img height=99  alt="20/579"  id="m51009183208"    src="thm/m51009183208.jpg">    <p>m51009183208    </p><br /></div>
+		<div class="pic float"><img height=99  alt="15/3552" id="m51009183215"    src="thm/m51009183215.jpg">    <p>m51009183215    </p><br /></div>
+		<div class="pic float"><img height=99  alt="405/2817"id="m51009183217"    src="thm/m51009183217.jpg">    <p>m51009183217    </p><br /></div>
+		<div class="pic float"><img height=99  alt="820/3779"id="m51009183220"    src="thm/m51009183220.jpg">    <p>m51009183220    </p><br /></div>
+		<div class="pic float"><img height=99  alt="98/1364" id="m51009183221"    src="thm/m51009183221.jpg">    <p>m51009183221    </p><br /></div>
+		<div class="pic float"><img height=99  alt="849/2941"id="m51009183222"    src="thm/m51009183222.jpg">    <p>m51009183222    </p><br /></div>
+		<div class="pic float"><img height=99  alt="64/186"  id="m51009183225"    src="thm/m51009183225.jpg">    <p>m51009183225    </p><br /></div>
+		<div class="pic float"><img height=99  alt="717/5609"id="m51009183227"    src="thm/m51009183227.jpg">    <p>m51009183227    </p><br /></div>
+		<div class="pic float"><img height=99  alt="20/9194" id="m51009183229"    src="thm/m51009183229.jpg">    <p>m51009183229    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark ioof people 1 grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">ilc</span></div>
+		<div class="pic float"><img height=99  alt="6/9910"  id="m51009183235t6"  src="thm/m51009183235t6.jpg">  <p>m51009183235t6  </p><br /></div>
+		<div class="pic float"><img height=99  alt="822/1172"id="m51009183237t2"  src="thm/m51009183237t2.jpg">  <p>m51009183237t2  </p><br /></div>
+		<div class="pic float"><img height=99  alt="36/4756" id="m51009183238t9"  src="thm/m51009183238t9.jpg">  <p>m51009183238t9  </p><br /></div>
+		<div class="pic float"><img height=99  alt="846/9238"id="m51009183243t5"  src="thm/m51009183243t5.jpg">  <p>m51009183243t5  </p><br /></div>
+		<div class="pic float"><img height=99  alt="571/5342"id="m51009183247"    src="thm/m51009183247.jpg">    <p>m51009183247    </p><br /></div>
+		<div class="pic float"><img height=99  alt="163/3807"id="m51009183257"    src="thm/m51009183257.jpg">    <p>m51009183257    </p><br /></div>
+		<div class="pic float"><img height=99  alt="692/6274"id="m51009183260"    src="thm/m51009183260.jpg">    <p>m51009183260    </p><br /></div>
+		<div class="pic float"><img height=99  alt="827/5345"id="m51009183262"    src="thm/m51009183262.jpg">    <p>m51009183262    </p><br /></div>
+		<div class="pic float"><img height=99  alt="585/2189"id="m51009183265"    src="thm/m51009183265.jpg">    <p>m51009183265    </p><br /></div>
+		<div class="pic float"><img height=99  alt="683/8446"id="m51009183276"    src="thm/m51009183276.jpg">    <p>m51009183276    </p><br /></div>
+		<div class="pic float"><img height=99  alt="508/8703"id="m51009183277"    src="thm/m51009183277.jpg">    <p>m51009183277    </p><br /></div>
+		<div class="pic float"><img height=99  alt="64/999"  id="m51009183279"    src="thm/m51009183279.jpg">    <p>m51009183279    </p><br /></div>
+		<div class="pic float"><img height=99  alt="714/1072"id="m51009183280"    src="thm/m51009183280.jpg">    <p>m51009183280    </p><br /></div>
+		<div class="pic float"><img height=99  alt="43/5461" id="m51009183281"    src="thm/m51009183281.jpg">    <p>m51009183281    </p><br /></div>
+		<div class="pic float"><img height=99  alt="600/6347"id="m51009183282"    src="thm/m51009183282.jpg">    <p>m51009183282    </p><br /></div>
+		<div class="pic float"><img height=99  alt="685/404" id="m51009183286"    src="thm/m51009183286.jpg">    <p>m51009183286    </p><br /></div>
+		<div class="pic float"><img height=99  alt="571/6445"id="m51009183287t81" src="thm/m51009183287t81.jpg"> <p>m51009183287t81 </p><br /></div>
+		<div class="pic float"><img height=99  alt="829/5711"id="m51009183295"    src="thm/m51009183295.jpg">    <p>m51009183295    </p><br /></div>
+		<div class="pic float"><img height=99  alt="560/3489"id="m51009183296"    src="thm/m51009183296.jpg">    <p>m51009183296    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark ioof lecture grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">ipl</span></div>
+		<div class="pic float"><img height=99  alt="703/4754"id="m51009193707"    src="thm/m51009193707.jpg">    <p>m51009193707    </p><br /></div>
+		<div class="pic float"><img height=99  alt="594/4359"id="m51009193708"    src="thm/m51009193708.jpg">    <p>m51009193708    </p><br /></div>
+		<div class="pic float"><img height=99  alt="687/8914"id="m51009193709"    src="thm/m51009193709.jpg">    <p>m51009193709    </p><br /></div>
+		<div class="pic float"><img height=99  alt="692/4879"id="m51009193715"    src="thm/m51009193715.jpg">    <p>m51009193715    </p><br /></div>
+		<div class="pic float"><img height=99  alt="685/3838"id="m51009193718"    src="thm/m51009193718.jpg">    <p>m51009193718    </p><br /></div>
+		<div class="pic float"><img height=99  alt="842/4083"id="m51009193724a"   src="thm/m51009193724a.jpg">   <p>m51009193724a   </p><br /></div>
+		<div class="pic float"><img height=99  alt="24/5296" id="m51009193724b"   src="thm/m51009193724b.jpg">   <p>m51009193724b   </p><br /></div>
+		<div class="pic float"><img height=99  alt="840/7177"id="m51009193725a"   src="thm/m51009193725a.jpg">   <p>m51009193725a   </p><br /></div>
+		<div class="pic float"><img height=99  alt="577/3918"id="m51009193725b"   src="thm/m51009193725b.jpg">   <p>m51009193725b   </p><br /></div>
+		<div class="pic float"><img height=99  alt="233/5743"id="m51009193727"    src="thm/m51009193727.jpg">    <p>m51009193727    </p><br /></div>
+		<div class="pic float"><img height=99  alt="830/6107"id="m51009193728"    src="thm/m51009193728.jpg">    <p>m51009193728    </p><br /></div>
+		<div class="pic float"><img height=99  alt="651/2066"id="m51009193731"    src="thm/m51009193731.jpg">    <p>m51009193731    </p><br /></div>
+		<div class="pic float"><img height=99  alt="824/9053"id="m51009193732"    src="thm/m51009193732.jpg">    <p>m51009193732    </p><br /></div>
+		<div class="pic float"><img height=99  alt="845/2905"id="m51009193733"    src="thm/m51009193733.jpg">    <p>m51009193733    </p><br /></div>
+		<div class="pic float"><img height=99  alt="89/4339" id="m51009193736"    src="thm/m51009193736.jpg">    <p>m51009193736    </p><br /></div>
+		<div class="pic float"><img height=99  alt="832/6603"id="m51009193738"    src="thm/m51009193738.jpg">    <p>m51009193738    </p><br /></div>
+		<div class="pic float"><img height=99  alt="829/1237"id="m51009193740"    src="thm/m51009193740.jpg">    <p>m51009193740    </p><br /></div>
+		<div class="pic float"><img height=99  alt="197/2622"id="m51009193741"    src="thm/m51009193741.jpg">    <p>m51009193741    </p><br /></div>
+		<div class="pic float"><img height=99  alt="13/433"  id="m51009193742"    src="thm/m51009193742.jpg">    <p>m51009193742    </p><br /></div>
+		<div class="pic float"><img height=99  alt="36/4518" id="m51009193750"    src="thm/m51009193750.jpg">    <p>m51009193750    </p><br /></div>
+		<div class="pic float"><img height=99  alt="14/4426" id="m51009193751"    src="thm/m51009193751.jpg">    <p>m51009193751    </p><br /></div>
+		<div class="pic float"><img height=99  alt="849/6428"id="m51009193752"    src="thm/m51009193752.jpg">    <p>m51009193752    </p><br /></div>
+		<div class="pic float"><img height=99  alt="18/5958" id="m51009193755"    src="thm/m51009193755.jpg">    <p>m51009193755    </p><br /></div>
+		<div class="pic float"><img height=99  alt="33/9602" id="m51009193760"    src="thm/m51009193760.jpg">    <p>m51009193760    </p><br /></div>
+		<div class="pic float"><img height=99  alt="841/9453"id="m51009193763"    src="thm/m51009193763.jpg">    <p>m51009193763    </p><br /></div>
+		<div class="pic float"><img height=99  alt="718/5167"id="m51009193764"    src="thm/m51009193764.jpg">    <p>m51009193764    </p><br /></div>
+		<div class="pic float"><img height=99  alt="10/4585" id="m51009193765"    src="thm/m51009193765.jpg">    <p>m51009193765    </p><br /></div>
+		<div class="pic float"><img height=99  alt="89/1331" id="m51009193769"    src="thm/m51009193769.jpg">    <p>m51009193769    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark ioof people grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">tam</span></div>
+		<div class="pic float"><img height=99  alt="819/6241" id="m51009183521"   src="../tamam/thm/m51009183521.jpg">   <p>m51009183521  </p><br /></div>
+		<div class="pic float"><img height=99  alt="11/5884"  id="m51009183522"   src="../tamam/thm/m51009183522.jpg">   <p>m51009183522  </p><br /></div>
+		<div class="pic float"><img height=99  alt="838/7626" id="m51009183523"   src="../tamam/thm/m51009183523.jpg">   <p>m51009183523  </p><br /></div>
+		<div class="pic float"><img height=99  alt="98/121"   id="m51009183525"   src="../tamam/thm/m51009183525.jpg">   <p>m51009183525  </p><br /></div>
+		<div class="pic float"><img height=99  alt="7/5723"   id="m51009183526"   src="../tamam/thm/m51009183526.jpg">   <p>m51009183526  </p><br /></div>
+		<div class="pic float"><img height=99  alt="834/7133" id="m51009183527"   src="../tamam/thm/m51009183527.jpg">   <p>m51009183527  </p><br /></div>
+		<div class="pic float"><img height=99  alt="52/9696"  id="m51009183528"   src="../tamam/thm/m51009183528.jpg">   <p>m51009183528  </p><br /></div>
+		<div class="pic float"><img height=99  alt="32/6019"  id="m51009183532"   src="../tamam/thm/m51009183532.jpg">   <p>m51009183532  </p><br /></div>
+		<div class="pic float"><img height=99  alt="69/6448"  id="m51009183533"   src="../tamam/thm/m51009183533.jpg">   <p>m51009183533  </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark tamam grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">tm2</span></div>
+		<div class="pic float"><img height=99  alt="801/7088"id="m51009193770"    src="thm/m51009193770.jpg">    <p>m51009193770    </p><br /></div>
+		<div class="pic float"><img height=99  alt="193/6200"id="m51009193783"    src="thm/m51009193783.jpg">    <p>m51009193783    </p><br /></div>
+		<div class="pic float"><img height=99  alt="8/6560"  id="m51009193785"    src="thm/m51009193785.jpg">    <p>m51009193785    </p><br /></div>
+		<div class="pic float"><img height=99  alt="695/5599"id="m51009193787"    src="thm/m51009193787.jpg">    <p>m51009193787    </p><br /></div>
+		<div class="pic float"><img height=99  alt="847/5564"id="m51009193865"    src="thm/m51009193865.jpg">    <p>m51009193865    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark tamam 2nd grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">ph</span></div>
+		<div class="pic float"><img height=99  alt="824/4531"id="m51009193804t7"  src="thm/m51009193804t7.jpg">  <p>m51009193804t7  </p><br /></div>
+		<div class="pic float"><img height=99  alt="3/8384"  id="m51009193797"    src="thm/m51009193797.jpg">    <p>m51009193797    </p><br /></div>
+		<div class="pic float"><img height=99  alt="225/9531"id="m51009193800"    src="thm/m51009193800.jpg">    <p>m51009193800    </p><br /></div>
+		<div class="pic float"><img height=99  alt="69/4049" id="m51009193831"    src="thm/m51009193831.jpg">    <p>m51009193831    </p><br /></div>
+		<div class="pic float"><img height=99  alt="43/1121" id="m51009193833"    src="thm/m51009193833.jpg">    <p>m51009193833    </p><br /></div>
+		<div class="pic float"><img height=99  alt="851/627" id="m51009193834"    src="thm/m51009193834.jpg">    <p>m51009193834    </p><br /></div>
+		<div class="pic float"><img height=99  alt="846/7701"id="m51009193837"    src="thm/m51009193837.jpg">    <p>m51009193837    </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark photos grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">ppl</span></div>
+		<div class="pic float"><img height=99  alt="40/5301" id="m51009193775"    src="thm/m51009193775.jpg">    <p>m51009193775    </p><br /></div>
+		<div class="pic float"><img height=99  alt="822/724" id="m51009193778"    src="thm/m51009193778.jpg">    <p>m51009193778    </p><br /></div>
+		<div class="pic float"><img height=99  alt="850/7710"id="m51009193802"    src="thm/m51009193802.jpg">    <p>m51009193802    </p><br /></div>
+
+		<div class="pic float"><img height=99  alt="546/7483"id="m51009193844"    src="thm/m51009193844.jpg">    <p>m51009193844    </p><br /></div>
+		<div class="pic float"><img height=99  alt="143/373" id="m51009193845"    src="thm/m51009193845.jpg">    <p>m51009193845    </p><br /></div>
+		<div class="pic float"><img height=99  alt="9/9591"  id="m51009193851a"   src="thm/m51009193851a.jpg">   <p>m51009193851a   </p><br /></div>
+		<div class="pic float"><img height=99  alt="143/9755"id="m51009193851b"   src="thm/m51009193851b.jpg">   <p>m51009193851b   </p><br /></div>
+		<div class="pic float"><img height=99  alt="829/103" id="m51009193852"    src="thm/m51009193852.jpg">    <p>m51009193852    </p><br /></div>
+		<div class="pic float"><img height=99  alt="692/4544"id="m51009193854t5"  src="thm/m51009193854t5.jpg">  <p>m51009193854t5  </p><br /></div>
+		<div class="pic float"><img height=99  alt="691/9611"id="m51009193859"    src="thm/m51009193859.jpg">    <p>m51009193859    </p><br /></div>
+		<div class="pic float"><img height=99  alt="843/6655"id="m51009193870"    src="thm/m51009193870.jpg">    <p>m51009193870    </p><br /></div>
+		<div class="pic float"><img height=99  alt="31/2975" id="m51009193875p6"  src="thm/m51009193875p6.jpg">  <p>m51009193875p6  </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark ioof people grouping	-->
+
+<div class="r">}</div>
+</div><!-- end mark ioof grouping	-->
+
+<div class="r">}</div>
+</div><!-- end mark all grouping	-->
+
+<!--</font>
+-->
+</body></html>

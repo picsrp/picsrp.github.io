@@ -1,0 +1,415 @@
+<html><head><title>Pir Zia in Seattle 11/11</title>
+<base href="http://db.tgu.ca/srp/shows/1/1/zia/i.htm">
+<script type="text/javascript" src="../../../../globals/picif.js"></script>
+<!--
+-->
+<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<!--
+http://i.tgu.ca/pics-11-zia
+-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+//  picif_start();	// a dup`ed exec...
+  FIRST="OFF";
+  FIRSTSRC="OFF";
+  loop = new Array;
+  time=400;
+  ANYACTION=1;
+  bfr="url('"; aft="')";
+  dwell=2;
+  var FIRSTSRCocc= new Boolean();
+  inc=1;
+  lpl=0;
+  stop=1;
+  $(".pic>img").each(function(){  this.height=99;  });
+
+function run(){
+  $('#targ').delay(1000*dwell).show(1,function(){
+    if(1>stop){
+      inc+=1; if(lpl<inc)inc=1;
+      FIRST.src=loop[inc-1];
+      run();}
+  });
+}
+ $(".r").click(function(event){
+    stop=1;
+    if(FIRSTSRCocc)FIRST.src=FIRSTSRC;
+ });
+
+  $(".l").click(function(event){
+//	alert("FIRSTSRCocc: "+FIRSTSRCocc);
+	if(FIRSTSRCocc)FIRST.src=FIRSTSRC;
+	FIRSTSRCocc=true;
+    loop = new Array;
+	$(this.parentNode).find(".pic:first>img").each(function(){
+		this.setAttribute('id','targ');
+		FIRST=this;  FIRSTSRC=FIRST.src;  });
+	$(this.parentNode).find(".pic>img").each(function(){
+		loop.push(this.src);  });
+		lpl=loop.length;
+		dwell=$("#dwellin").val();
+	stop=0;
+	run();
+   });
+
+
+  $(".input:text:first").focus();
+
+  $(".note").click(function(event){
+    this.innerHTML="\n<br \>lpl="+lpl+"\n<br \>"+this.innerHTML;
+    this.innerHTML="\n<br \>dwell="+dwell+"\n<br \>"+this.innerHTML;
+    this.innerHTML="\n<br \>FIRSTSRC="+FIRSTSRC+"\n<br \>"+this.innerHTML;
+  });
+ });
+</script>
+<style  type="text/css">
+.pic  {font-size: smaller;
+}
+.move  {font-size: 250%;
+}
+.pic img  {//height:108
+}
+.note  {float: left;
+  border: 1px solid
+}
+.l  {float: left;
+	color:red;
+	font-size: 700%;
+	text-align: center;
+}
+.r  {float: left;
+	color:red;
+	font-size: 700%;
+	text-align: center;
+}
+.c	{  font-size: 14%;
+    color:gray;
+}
+.red  {color:red
+}
+</style>
+
+</head>
+<body onload="picif_start();" >
+
+<div class="note"></div>
+
+<p align="right">pic of <b>Hazrat Inayat Khan</b> from
+<a href="http://wahiduddin.net">wahiduddin.net</a></p>
+<img class="thum" align="right" height=200 onDblClick="height=200"
+onClick="height=ff*height;"
+src="http://wahiduddin.net/hik/images/hik_1921_ed_450w.jpg" alt="">
+
+<div><center>
+<a href="http://i.tgu.ca/pics-11-zia">
+	<font size="+1">
+		http://i.tgu.ca/
+		<br />pics-11-zia
+		</font></a>
+</center></div>
+
+<div class="float">
+	<font size="+1">
+
+		<a href="http://www.sevenpillarshouse.org/calendar/item/the_journey_from_birth_to_death/">
+		<em>Pir Zia</em> 11/11/11</a>
+	<br />at <a href="http://www.seattlemountaineers.org/">Mountaineers in Seattle</a>
+	<br /><a href="http://soi-seattle.org/"><em>by SOI Seattle</em></a>
+	<br />November 2011
+	<p />
+	</font>
+</div>
+
+<div class="float">
+	<a href="http://pics.tgu.ca">
+	<font color="red" size="+2">All Shows</font></a>
+	<br />
+	<a href="../../../../globals/if-how.htm">UI HowTo</a>
+	<br />
+	<a href="../../../../globals/contact.htm">contact & copyright</a>
+	<br />
+</div>
+
+<br />
+<!--
+<font size="+1">
+-->
+
+<hr width="30%" />
+Use the <b>UI</b> to reSize and reArrange PICS. [keyboard & pointer]
+<br /><span class="red">NB.</span> If the <b>UI</b> loses FOCUS: <b>Click</b>ing on witespace should find it!
+
+<br /><b>Click</b> on a <span class="red">{</span> to rotate its subgroup
+<br /><b>Click</b> on any <span class="red">}</span> to end a rotation.
+<br /><b>Click</b> on an image to grow. [and to set marker in UI]
+<br />Before a rotation <b>Set dwell</b> time in second`s:
+	<input id="dwellin" name="dwell" type="text" value="2" style="background: pink; color: blue;"/>
+<!--
+	<font color="red" size="+2"><input id="dwellin" name="dwell" type="text" value="123"/></font>
+	thumb size:<input id="thumb_set" name="thumb_size" type="text" value="100"/>
+	web size:<input id="web_set" name="web_size" type="text" value="450"/>
+-->
+<hr width="30%" />
+
+<div class="mark">
+<div class="l">{<span class="c">al</span></div>
+
+	<div class="mark">
+	<div class="l">{<span class="c">11</span></div>
+
+<div class="pic float"><img height=99 alt="191/7894"id="m51111117218t0"src="thm/m51111117218t0.jpg"><p>m51111117218t0</p><br /></div>
+<div class="pic float"><img height=99 alt="805/6834"id="m51111117182"src="thm/m51111117182.jpg"><p>m51111117182</p><br /></div>
+
+	<div class="r">}</div>
+	</div><!-- end mark 11th grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">12</span></div>
+
+		<div class="mark">
+		<div class="l">{<span class="c">cr</span></div>
+<div class="pic float"><img height=99 alt="17/8307"id="m51111127397"src="thm/m51111127397.jpg"><p>m51111127397</p><br /></div>
+<div class="pic float"><img height=99 alt="16/8904"id="m51111127398"src="thm/m51111127398.jpg"><p>m51111127398</p><br /></div>
+<div class="pic float"><img height=99 alt="259/4091"id="m51111127399"src="thm/m51111127399.jpg"><p>m51111127399</p><br /></div>
+
+		<div class="r">}</div>
+		</div><!-- end mark crowd grouping	-->
+
+		<div class="mark">
+		<div class="l">{<span class="c">z</span></div>
+<div class="pic float"><img height=99 alt="11/1139"id="m71111122739p0"src="thm/m71111122739p0.jpg"><p>m71111122739p0</p><br /></div>
+<div class="pic float"><img height=99 alt="17/6272"id="m71111122746"src="thm/m71111122746.jpg"><p>m71111122746</p><br /></div>
+
+		<div class="r">}</div>
+		</div><!-- end mark zia grouping	-->
+
+<div class="pic float"><img height=99 alt="94/8540"id="m81111121767"src="thm/m81111121767.jpg"><p>m81111121767</p><br /></div>
+
+	<div class="r">}</div>
+	</div><!-- end mark 12th grouping	-->
+
+
+		<div class="mark">
+		<div class="l">{<span class="c">ev</span></div>
+<div class="pic float"><img height=99 alt="528/9194"id="m51111117051t2"src="thm/m51111117051t2.jpg"><p>m51111117051t2</p><br /></div>
+<div class="pic float"><img height=99 alt="835/5084"id="m51111117053"src="thm/m51111117053.jpg"><p>m51111117053</p><br /></div>
+<div class="pic float"><img height=99 alt="805/8862"id="m51111117058"src="thm/m51111117058.jpg"><p>m51111117058</p><br /></div>
+
+	<div class="mark">	<div class="l">{<span class="c">z1</span></div>
+<!--	z1	-->
+<div class="pic float"><img height=99 alt="207/8053"id="m51111117059"src="thm/m51111117059.jpg"><p>m51111117059</p><br /></div>
+<div class="pic float"><img height=99 alt="641/4307"id="m51111117060"src="thm/m51111117060.jpg"><p>m51111117060</p><br /></div>
+<!--	/	-->
+	<div class="r">}</div>	</div>
+
+<div class="pic float"><img height=99 alt="440/5198"id="m51111117061"src="thm/m51111117061.jpg"><p>m51111117061</p><br /></div>
+<div class="pic float"><img height=99 alt="213/1277"id="m51111117064"src="thm/m51111117064.jpg"><p>m51111117064</p><br /></div>
+<div class="pic float"><img height=99 alt="585/1766"id="m51111117071"src="thm/m51111117071.jpg"><p>m51111117071</p><br /></div>
+<div class="pic float"><img height=99 alt="824/939"id="m51111117073"src="thm/m51111117073.jpg"><p>m51111117073</p><br /></div>
+<div class="pic float"><img height=99 alt="267/8510"id="m51111117074"src="thm/m51111117074.jpg"><p>m51111117074</p><br /></div>
+<div class="pic float"><img height=99 alt="202/1101"id="m51111117076"src="thm/m51111117076.jpg"><p>m51111117076</p><br /></div>
+<div class="pic float"><img height=99 alt="62/9522"id="m51111117077"src="thm/m51111117077.jpg"><p>m51111117077</p><br /></div>
+
+	<div class="mark">	<div class="l">{<span class="c">z2</span></div>
+<!--	z2	-->
+<div class="pic float"><img height=99 alt="141/9962"id="m51111117078"src="thm/m51111117078.jpg"><p>m51111117078</p><br /></div>
+<div class="pic float"><img height=99 alt="189/1959"id="m51111117079"src="thm/m51111117079.jpg"><p>m51111117079</p><br /></div>
+<div class="pic float"><img height=99 alt="267/9287"id="m51111117080"src="thm/m51111117080.jpg"><p>m51111117080</p><br /></div>
+<div class="pic float"><img height=99 alt="10/6259"id="m51111117081"src="thm/m51111117081.jpg"><p>m51111117081</p><br /></div>
+<div class="pic float"><img height=99 alt="32/7983"id="m51111117082"src="thm/m51111117082.jpg"><p>m51111117082</p><br /></div>
+<div class="pic float"><img height=99 alt="836/5416"id="m51111117083"src="thm/m51111117083.jpg"><p>m51111117083</p><br /></div>
+<div class="pic float"><img height=99 alt="249/8536"id="m51111117084"src="thm/m51111117084.jpg"><p>m51111117084</p><br /></div>
+<div class="pic float"><img height=99 alt="822/9451"id="m51111117085"src="thm/m51111117085.jpg"><p>m51111117085</p><br /></div>
+<!--	/	-->
+	<div class="r">}</div>	</div>
+
+<div class="pic float"><img height=99 alt="853/262"id="m51111117093"src="thm/m51111117093.jpg"><p>m51111117093</p><br /></div>
+<div class="pic float"><img height=99 alt="33/2931"id="m51111117099"src="thm/m51111117099.jpg"><p>m51111117099</p><br /></div>
+
+	<div class="mark">	<div class="l">{<span class="c">r1</span></div>
+<!--	r1	-->
+<div class="pic float"><img height=99 alt="842/3397"id="m51111117102"src="thm/m51111117102.jpg"><p>m51111117102</p><br /></div>
+<div class="pic float"><img height=99 alt="840/342"id="m51111117106"src="thm/m51111117106.jpg"><p>m51111117106</p><br /></div>
+<div class="pic float"><img height=99 alt="217/2286"id="m51111117116"src="thm/m51111117116.jpg"><p>m51111117116</p><br /></div>
+<!--	/	-->
+
+	<div class="r">}</div>	</div>
+	<div class="mark">	<div class="l">{<span class="c">z3</span></div>
+
+<!--	z3	-->
+<div class="pic float"><img height=99 alt="401/4443"id="m51111117117"src="thm/m51111117117.jpg"><p>m51111117117</p><br /></div>
+<div class="pic float"><img height=99 alt="11/3374"id="m51111117118"src="thm/m51111117118.jpg"><p>m51111117118</p><br /></div>
+<div class="pic float"><img height=99 alt="204/1103"id="m51111117122"src="thm/m51111117122.jpg"><p>m51111117122</p><br /></div>
+<!--	/	-->
+
+	<div class="r">}</div>	</div>
+	<div class="mark">	<div class="l">{<span class="c">g1</span></div>
+
+<!--	g1	-->
+<div class="pic float"><img height=99 alt="580/3355"id="m51111117119"src="thm/m51111117119.jpg"><p>m51111117119</p><br /></div>
+<div class="pic float"><img height=99 alt="197/1895"id="m51111117121"src="thm/m51111117121.jpg"><p>m51111117121</p><br /></div>
+<div class="pic float"><img height=99 alt="442/6940"id="m51111117126"src="thm/m51111117126.jpg"><p>m51111117126</p><br /></div>
+<!--	/	-->
+	<div class="r">}</div>	</div>
+
+<div class="pic float"><img height=99 alt="52/964"id="m51111117129"src="thm/m51111117129.jpg"><p>m51111117129</p><br /></div>
+<div class="pic float"><img height=99 alt="51/9240"id="m51111117131"src="thm/m51111117131.jpg"><p>m51111117131</p><br /></div>
+<div class="pic float"><img height=99 alt="607/1688"id="m51111117134"src="thm/m51111117134.jpg"><p>m51111117134</p><br /></div>
+<div class="pic float"><img height=99 alt="31/2561"id="m51111117139t2"src="thm/m51111117139t2.jpg"><p>m51111117139t2</p><br /></div>
+<div class="pic float"><img height=99 alt="52/4688"id="m51111117156"src="thm/m51111117156.jpg"><p>m51111117156</p><br /></div>
+<div class="pic float"><img height=99 alt="638/3364"id="m51111117166"src="thm/m51111117166.jpg"><p>m51111117166</p><br /></div>
+<div class="pic float"><img height=99 alt="263/1921"id="m51111117204"src="thm/m51111117204.jpg"><p>m51111117204</p><br /></div>
+
+<div class="pic float"><img height=99 alt="705/5963"id="m51111117221"src="thm/m51111117221.jpg"><p>m51111117221</p><br /></div>
+<div class="pic float"><img height=99 alt="338/7813"id="m51111117222"src="thm/m51111117222.jpg"><p>m51111117222</p><br /></div>
+
+	<div class="mark">	<div class="l">{<span class="c">r2</span></div>
+<!--	r2	-->
+<div class="pic float"><img height=99 alt="26/408"id="m51111117226"src="thm/m51111117226.jpg"><p>m51111117226</p><br /></div>
+<div class="pic float"><img height=99 alt="818/1527"id="m51111117234"src="thm/m51111117234.jpg"><p>m51111117234</p><br /></div>
+<div class="pic float"><img height=99 alt="522/6506"id="m51111117235"src="thm/m51111117235.jpg"><p>m51111117235</p><br /></div>
+<!--	/	-->
+	<div class="r">}</div>	</div>
+
+<div class="pic float"><img height=99 alt="197/5300"id="m51111117237"src="thm/m51111117237.jpg"><p>m51111117237</p><br /></div>
+<div class="pic float"><img height=99 alt="832/8840"id="m51111117238"src="thm/m51111117238.jpg"><p>m51111117238</p><br /></div>
+<div class="pic float"><img height=99 alt="233/1855"id="m51111117250"src="thm/m51111117250.jpg"><p>m51111117250</p><br /></div>
+<div class="pic float"><img height=99 alt="862/5986"id="m51111117254"src="thm/m51111117254.jpg"><p>m51111117254</p><br /></div>
+<div class="pic float"><img height=99 alt="406/1827"id="m51111117263"src="thm/m51111117263.jpg"><p>m51111117263</p><br /></div>
+<div class="pic float"><img height=99 alt="707/5061"id="m51111117267"src="thm/m51111117267.jpg"><p>m51111117267</p><br /></div>
+
+	<div class="mark">	<div class="l">{<span class="c">i1</span></div>
+<!--	i1	-->
+<div class="pic float"><img height=99 alt="535/4792"id="m51111117278"src="thm/m51111117278.jpg"><p>m51111117278</p><br /></div>
+<div class="pic float"><img height=99 alt="706/8459"id="m51111117282"src="thm/m51111117282.jpg"><p>m51111117282</p><br /></div>
+<div class="pic float"><img height=99 alt="208/6299"id="m51111117283"src="thm/m51111117283.jpg"><p>m51111117283</p><br /></div>
+<div class="pic float"><img height=99 alt="100/2766"id="m51111117285"src="thm/m51111117285.jpg"><p>m51111117285</p><br /></div>
+<div class="pic float"><img height=99 alt="249/9999"id="m51111117291"src="thm/m51111117291.jpg"><p>m51111117291</p><br /></div>
+<div class="pic float"><img height=99 alt="51/8445"id="m51111117293"src="thm/m51111117293.jpg"><p>m51111117293</p><br /></div>
+<!--	/	-->
+
+	<div class="r">}</div>	</div>
+	<div class="mark">	<div class="l">{<span class="c">md</span></div>
+
+<!--	md	-->
+<div class="pic float"><img height=99 alt="838/2303"id="m71111112581"src="thm/m71111112581.jpg"><p>m71111112581</p><br /></div>
+<div class="pic float"><img height=99 alt="97/4460"id="m71111112583"src="thm/m71111112583.jpg"><p>m71111112583</p><br /></div>
+<!--	/	-->
+	<div class="r">}</div>	</div>
+
+<div class="pic float"><img height=99 alt="815/6773"id="m71111112589"src="thm/m71111112589.jpg"><p>m71111112589</p><br /></div>
+<div class="pic float"><img height=99 alt="28/8126"id="m71111112592"src="thm/m71111112592.jpg"><p>m71111112592</p><br /></div>
+<div class="pic float"><img height=99 alt="822/697"id="m71111112593"src="thm/m71111112593.jpg"><p>m71111112593</p><br /></div>
+<div class="pic float"><img height=99 alt="580/9976"id="m81111111284"src="thm/m81111111284.jpg"><p>m81111111284</p><br /></div>
+
+	<div class="mark">	<div class="l">{<span class="c">i2</span></div>
+<!--	i2	-->
+<div class="pic float"><img height=99 alt="545/6663"id="m81111111306"src="thm/m81111111306.jpg"><p>m81111111306</p><br /></div>
+<div class="pic float"><img height=99 alt="859/5449"id="m81111111313"src="thm/m81111111313.jpg"><p>m81111111313</p><br /></div>
+<div class="pic float"><img height=99 alt="522/4693"id="m81111111325"src="thm/m81111111325.jpg"><p>m81111111325</p><br /></div>
+<div class="pic float"><img height=99 alt="28/8250"id="m81111111327"src="thm/m81111111327.jpg"><p>m81111111327</p><br /></div>
+<!--	/	-->
+	<div class="r">}</div>	</div>
+
+<div class="pic float"><img height=99 alt="577/1230"id="m81111111357t9"src="thm/m81111111357t9.jpg"><p>m81111111357t9</p><br /></div>
+<div class="pic float"><img height=99 alt="829/3369"id="m81111111358"src="thm/m81111111358.jpg"><p>m81111111358</p><br /></div>
+<div class="pic float"><img height=99 alt="217/2411"id="m81111111424"src="thm/m81111111424.jpg"><p>m81111111424</p><br /></div>
+<div class="pic float"><img height=99 alt="38/1833"id="m81111111426"src="thm/m81111111426.jpg"><p>m81111111426</p><br /></div>
+
+	<div class="mark">	<div class="l">{<span class="c">g2</span></div>
+<!--	g2	-->
+<div class="pic float"><img height=99 alt="412/8793"id="m81111111443"src="thm/m81111111443.jpg"><p>m81111111443</p><br /></div>
+<div class="pic float"><img height=99 alt="189/4184"id="m81111111445p52"src="thm/m81111111445p52.jpg"><p>m81111111445p52</p><br /></div>
+<div class="pic float"><img height=99 alt="267/7262"id="m81111111447"src="thm/m81111111447.jpg"><p>m81111111447</p><br /></div>
+<div class="pic float"><img height=99 alt="526/3567"id="m81111111448t9"src="thm/m81111111448t9.jpg"><p>m81111111448t9</p><br /></div>
+<div class="pic float"><img height=99 alt="23/7928"id="m81111111465t6"src="thm/m81111111465t6.jpg"><p>m81111111465t6</p><br /></div>
+<div class="pic float"><img height=99 alt="51/226"id="m81111111493p504"src="thm/m81111111493p504.jpg"><p>m81111111493p504</p><br /></div>
+<div class="pic float"><img height=99 alt="100/9529"id="m81111111508"src="thm/m81111111508.jpg"><p>m81111111508</p><br /></div>
+<div class="pic float"><img height=99 alt="16/2055"id="m81111111571"src="thm/m81111111571.jpg"><p>m81111111571</p><br /></div>
+<!--	/	-->
+	<div class="r">}</div>	</div>
+
+<div class="pic float"><img height=99 alt="248/7334"id="m81111111519t2p16"src="thm/m81111111519t2p16.jpg"><p>m81111111519t2p16</p><br /></div>
+<div class="pic float"><img height=99 alt="528/6699"id="m81111111535"src="thm/m81111111535.jpg"><p>m81111111535</p><br /></div>
+<div class="pic float"><img height=99 alt="204/881"id="m81111111598"src="thm/m81111111598.jpg"><p>m81111111598</p><br /></div>
+<div class="pic float"><img height=99 alt="833/2128"id="m81111111603"src="thm/m81111111603.jpg"><p>m81111111603</p><br /></div>
+<div class="pic float"><img height=99 alt="193/4163"id="m81111111625"src="thm/m81111111625.jpg"><p>m81111111625</p><br /></div>
+
+	<div class="mark">	<div class="l">{<span class="c">g3</span></div>
+<!--	g3	-->
+<div class="pic float"><img height=99 alt="710/1285"id="m81111111688t1"src="thm/m81111111688t1.jpg"><p>m81111111688t1</p><br /></div>
+<div class="pic float"><img height=99 alt="809/1605"id="m81111111688t1p74"src="thm/m81111111688t1p74.jpg"><p>m81111111688t1p74</p><br /></div>
+<!--	/	-->
+	<div class="r">}</div>	</div>
+
+<div class="pic float"><img height=99 alt="812/374"id="m81111111692"src="thm/m81111111692.jpg"><p>m81111111692</p><br /></div>
+<div class="pic float"><img height=99 alt="233/3070"id="m81111111693"src="thm/m81111111693.jpg"><p>m81111111693</p><br /></div>
+
+	<div class="mark">	<div class="l">{<span class="c">cm</span></div>
+<!--	cm	-->
+<div class="pic float"><img height=99 alt="404/2623"id="m81111111696"src="thm/m81111111696.jpg"><p>m81111111696</p><br /></div>
+<div class="pic float"><img height=99 alt="685/5674"id="m81111111706"src="thm/m81111111706.jpg"><p>m81111111706</p><br /></div>
+<div class="pic float"><img height=99 alt="683/9813"id="m81111111708"src="thm/m81111111708.jpg"><p>m81111111708</p><br /></div>
+<!--	/	-->
+	<div class="r">}</div>	</div>
+
+<div class="pic float"><img height=99 alt="210/6852"id="m81111111729"src="thm/m81111111729.jpg"><p>m81111111729</p><br /></div>
+<div class="pic float"><img height=99 alt="69/4096"id="m81111111753"src="thm/m81111111753.jpg"><p>m81111111753</p><br /></div>
+<div class="pic float"><img height=99 alt="442/4177"id="m81111111755"src="thm/m81111111755.jpg"><p>m81111111755</p><br /></div>
+
+	<div class="mark">	<div class="l">{<span class="c">g4</span></div>
+<!--	g4	-->
+<div class="pic float"><img height=99 alt="233/9817"id="m511111171271"src="thm/m511111171271.jpg"><p>m511111171271</p><br /></div>
+<div class="pic float"><img height=99 alt="94/241"id="m511111171281"src="thm/m511111171281.jpg"><p>m511111171281</p><br /></div>
+<!--	/	-->
+
+	<div class="r">}</div>	</div>
+	<div class="mark">	<div class="l">{<span class="c">e</span></div>
+
+<!--	e	-->
+<div class="pic float"><img height=99 alt="94/4654"id="m51111116876"src="thm/m51111116876.jpg"><p>m51111116876</p><br /></div>
+<div class="pic float"><img height=99 alt="26/774"id="m51111116890"src="thm/m51111116890.jpg"><p>m51111116890</p><br /></div>
+<div class="pic float"><img height=99 alt="838/6982"id="m51111116904"src="thm/m51111116904.jpg"><p>m51111116904</p><br /></div>
+<div class="pic float"><img height=99 alt="859/9964"id="m51111116917"src="thm/m51111116917.jpg"><p>m51111116917</p><br /></div>
+<div class="pic float"><img height=99 alt="803/4209"id="m51111116927"src="thm/m51111116927.jpg"><p>m51111116927</p><br /></div>
+<div class="pic float"><img height=99 alt="249/9585"id="m51111116969"src="thm/m51111116969.jpg"><p>m51111116969</p><br /></div>
+<!--	/	-->
+
+	<div class="r">}</div>	</div>
+	<div class="mark">	<div class="l">{<span class="c">a1</span></div>
+
+<!--	a1	-->
+<div class="pic float"><img height=99 alt="829/7683"id="m51111116990"src="thm/m51111116990.jpg"><p>m51111116990</p><br /></div>
+<div class="pic float"><img height=99 alt="685/8844"id="m51111117006"src="thm/m51111117006.jpg"><p>m51111117006</p><br /></div>
+<!--	/	-->
+
+	<div class="r">}</div>	</div>
+	<div class="mark">	<div class="l">{<span class="c">r3</span></div>
+
+<!--	r3	-->
+<div class="pic float"><img height=99 alt="507/3594"id="m51111117011"src="thm/m51111117011.jpg"><p>m51111117011</p><br /></div>
+<div class="pic float"><img height=99 alt="716/3623"id="m51111117012"src="thm/m51111117012.jpg"><p>m51111117012</p><br /></div>
+<div class="pic float"><img height=99 alt="694/1981"id="m51111117020"src="thm/m51111117020.jpg"><p>m51111117020</p><br /></div>
+<div class="pic float"><img height=99 alt="683/3910"id="m51111117044"src="thm/m51111117044.jpg"><p>m51111117044</p><br /></div>
+<div class="pic float"><img height=99 alt="207/4427"id="m51111117045"src="thm/m51111117045.jpg"><p>m51111117045</p><br /></div>
+<div class="pic float"><img height=99 alt="440/1050"id="m51111117046"src="thm/m51111117046.jpg"><p>m51111117046</p><br /></div>
+<div class="pic float"><img height=99 alt="85/4995"id="m51111117047"src="thm/m51111117047.jpg"><p>m51111117047</p><br /></div>
+<div class="pic float"><img height=99 alt="824/3081"id="m51111117048"src="thm/m51111117048.jpg"><p>m51111117048</p><br /></div>
+<div class="pic float"><img height=99 alt="37/5932"id="m51111117049"src="thm/m51111117049.jpg"><p>m51111117049</p><br /></div>
+<div class="pic float"><img height=99 alt="72/4636"id="m51111117050"src="thm/m51111117050.jpg"><p>m51111117050</p><br /></div>
+<!--	/	-->
+	<div class="r">}</div>	</div>
+
+	<div class="r">}</div>
+	</div><!-- end mark ev grouping	-->
+
+<div class="r">}</div>
+</div><!-- end mark all grouping	-->
+
+
+<!--</font>
+-->
+</body></html>

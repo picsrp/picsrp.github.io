@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>slide show</title>
+<script type="text/javascript" src="./slide.js"></script>
+<style type="text/css">
+/* http://www.gnostice.com/nl_article.asp?id=208&t=making_an_interactive_treeview_control_from_an_html_nested_list
+*/
+  NB.b {background-color:#fdb;}
+  i {background-color:#dfd;}
+  ul.LinkedList { display: block; }
+  ul.LinkedList ul { display: none; }
+  .hcStyle { cursor: pointer }  /* For IE */
+  .leaf {	background-color:#fdd;
+				cursor: help }  /* For IE */
+  .doit {	background-color:#dff;
+				cursor: cell }  /* For IE */
+</style>
+<script type="text/JavaScript">
+// Add this to the onload event of the BODY element
+function addEvents() { activateTree(
+	document.getElementById("LinkedList1")); }
+// This function traverses the list and add links to nested list items
+function activateTree(oList) {
+// Collapse the tree
+for (var i=0; i < oList.getElementsByTagName("ul").length; i++) {
+	oList.getElementsByTagName("ul")[i].style.display="none";
+}
+// Add the click-event handler to the list items
+if (oList.addEventListener) {
+	oList.addEventListener("click", toggleBranch, false);
+} else if (oList.attachEvent) { // For IE
+	oList.attachEvent("onclick", toggleBranch);
+}
+if (oList.addEventListener) {
+	oList.addEventListener("dblclick", doAll, false);
+} else if (oList.attachEvent) { // For IE
+	oList.attachEvent("dblclick", doAll);
+}
+// Make the nested items look like links
+addLinksToBranches(oList);
+}
+// This is the click-event handler
+function toggleBranch(event) {
+	var oBranch, cSubBranches;
+	if (event.target) {
+		oBranch = event.target;
+	} else if (event.srcElement) { // For IE
+		oBranch = event.srcElement;
+	}
+	cSubBranches = oBranch.getElementsByTagName("ul");
+	if (cSubBranches.length > 0) {
+			if (cSubBranches[0].style.display == "block") { cSubBranches[0].style.display = "none";
+			} else { cSubBranches[0].style.display = "block"; }
+	}
+	if (oBranch.className =="leaf") 
+		oBranch.className ="doit"
+	else if (oBranch.className =="doit")
+		oBranch.className ="leaf";
+}
+// This is the dblClick-event handler
+function doAll(event) {
+	var oBranch, cSubBranches;
+	if (event.target) {
+		oBranch = event.target;
+	} else if (event.srcElement) { // For IE
+		oBranch = event.srcElement;
+	}
+	leaves = oBranch.getElementsByTagName("li");
+	if (leaves.length > 0)
+		for (i=0, n=leaves.length; i<n; i++)
+			if(leaves[i].className =="leaf")
+				leaves[i].className ="doit"
+			else if(leaves[i].className =="doit")
+				leaves[i].className ="leaf";
+}
+// This function makes nested list items look like links
+function addLinksToBranches(oList) {
+	var cBranches = oList.getElementsByTagName("li");
+	var i, n, cSubBranches;
+	if (cBranches.length > 0) {
+		for (i=0, n = cBranches.length; i < n; i++) {
+			cSubBranches = cBranches[i].getElementsByTagName("ul");
+			if (cSubBranches.length > 0) {
+				cBranches[i].className = "hcStyle";
+				cBranches[i].style.color = "blue";
+			}else if((cSubBranches.length == 0)){
+				cBranches[i].className = "leaf";
+				cBranches[i].style.color = "green";
+				par=cBranches[i];
+				ttle=par.textContent+"/web";
+				par=par.parentNode;
+				while(par.className!="LinkedList"){
+					if(par.tagName=="UL") ttle="/"+ttle;
+					if(par.tagName=="LI"){
+						tc=par.textContent;
+						tc=tc.substring(0,tc.indexOf("\n"));
+						ttle=tc.trim()+ttle;
+					} par=par.parentNode;
+				} cBranches[i].title=ttle;
+			}
+		}
+	}
+}
+  </script>
+  <style>
+.hints:hover {color: black}
+.hints {color: lightblue}
+img {border: 2px solid #c00;}
+</style>
+</head><body onload="slide(); addEvents();" >
+<h2>Slide Show of <a href="http://pics.tgu.ca">Pics.tgu.ca</a></h2>
+
+<!--	--	--	--	--	--	--	iface	--	--	--	--	--	--	--	-->
+<div style="border:2px solid;color:black;">
+<div style="float: right; width: 48%; ">
+<b>keyboard</b><br />
+<b>HJKL</b> move around lists<br />
+<b>J & K</b> move within a list<br />
+<b>H & L</b> move between lists<br />
+<b>CR C</b>opies pic to selection (or <b>D</b>eletes if focused)<br />
+<b>S</b>`low or <b>S</b>`tart a <b>S</b>lide<b>S</b>how on <b>S</b>elected<br />
+<b>I</b>`ncrease image sizes &
+<b>R</b>`eset image sizes<br />
+</div>
+
+<div style="padding-right: 52%; text-align:right">
+<b>mouse</b><br />
+<b>Click</b> moves to next pic in list<br />
+<b>MouseDown</b> + <b>Drag Out</b> moves to prev pic<br />
+Pics can be <b>Dragged To</b> select list<br />
+<b>DoubleClick</b> opens pics website<br />
+<b>`` on select</b> slows or starts slideshow<br />
+<b>MouseOver</b> picks list<br />
+</div>
+
+<div style="text-align:center;">
+Or have a SlideShow with
+<span onclick="everything();simg.src='http://i.tgu.ca/pics-gina_ms'" style="font-size: 130%;border:1px solid;color:#c31;"><b>E</b>`verything</span> in it.
+</div> </div><br />
+<!--	--	--	--	--	--	--	pics	--	--	--	--	--	--	--	-->
+<div style="float: right; width: 50%; ">
+<div style="color:#c82;">The light of Gina<br />
+<img id="0" width="99"
+onmouseover="base=0;fs()"
+ondblclick="parent.location='http://i.tgu.ca/pics-gina-555'"
+onclick="incPic(0);nextPic(0)"
+onmousedown="mdb=0;prevPic(0);return false"
+src="http://db.tgu.ca/srp/shows/0/5/gina-555/web/a1021243.jpg"
+title="a1021243"/>
+<br />is going national</div>
+
+<div style="color:#d64;">
+Soon she will be making
+<br />
+<img id="1" width="99"
+onmouseover="base=1;fs()"
+ondblclick="parent.location='http://i.tgu.ca/pics-mystic04'"
+onclick="incPic(1);nextPic(1)"
+onmousedown="mdb=1;prevPic(1);return false"
+src="http://db.tgu.ca/srp/shows/0/4/mystic04/web/a1006991.jpg"
+title="a1006991">
+<br />less of the local calls</div>
+
+<div style="color:#e46;">
+To get her darshan
+<br />
+<img id="2" width="99"
+onmouseover="base=2;fs()"
+ondblclick="parent.location='http://tgu.ca/pix/gina.htm'"
+onclick="incPic(2);nextPic(2)"
+onmousedown="mdb=2;prevPic(2);return false"
+srcXX="http://tgu.ca/pix/intiman-04-t.jpg"
+title="intiman-13-t">
+<br />be with her now</div>
+
+<div style="color:#f2a;">
+while it is
+<br />
+<img id="3" width="99"
+onmouseover="base=3;fs()"
+ondblclick="parent.location='http://i.tgu.ca/pics-gina_0707'"
+onclick="incPic(3);nextPic(3)"
+onmousedown="mdb=3;prevPic(3);return false"
+src="http://db.tgu.ca/srp/shows/0/7/gina-0707/web/7d016333.jpg"
+title="7d016333">
+<br />still informal</div>
+</div>
+<!--	--	--	--	--	--	--	select	--	--	--	--	--	--	-->
+<div id="s" style="padding-right: 50%; ">
+Selected<br />
+<img id="4" width="210"
+onmouseover="base=4;fs();width=rez*70"
+onclick="incPic(4);nextPic(4)"
+onmousedown="mdb=4;prevPic(4)"
+onmouseup="if(mdb<llm1)dragPic();"
+ondblclick="if(1==ival){slideshow();simg.src='http://i.tgu.ca/pics-gina_ms'}; ival++;"
+src="http://db.tgu.ca/srp/shows/0/7/gina-0707/web/7d016333.jpg" title="7d016333" />
+<br />pictures</div>
+<!--	--	--	--	--	--	--	footer	--	--	--	--	--	--	-->
+<hr /><div><p class="hints" id='addy'>
+The interface relies on Javascript and CSS. Everthing works fine under <b>Opera, Chrome</b> and <b>FireFox</b>. Of course one cannot test everything, and somehow with so many features it is likely to fail under such not as various older <b>Internet Exploders</b>, oh well, it does meet the standards obeying browsers anyway. i would be interested to know how this interface fares under <b>Apple</b>, <b>Android</b> or <b>iOS</b> browsers though ...  so give me a
+<a href="mailto:krsnadas.srp@gmail.com">jingle</a>
+(or for more pics).
+</p>
+<p class="hints" id='hint' >
+<span style="color:black">*</span>Easter Egg Hint, it is two keystrokes starting with a~
+</p></div>
+<!--	--	--	--	--	--	ALinkedList	--	--	--	--	--	--	-->
+<ul id="LinkedList1" class="LinkedList">
+
+
+<li>..
+<ul>
+	<li>../0
+<ul>
+	<li>../0/2
+<ul>
+	<li>	../0/2/dupmarsh	</li>
+	<li>	../0/2/dupor	</li>
+</ul></li>
+	<li>../0/4
+<ul>
+	<li>	../0/4/ht_04	</li>
+	<li>	../0/4/jajjawi-sea	</li>
+	<li>	../0/4/jajjawi-wi	</li>
+	<li>	../0/4/jamal04	</li>
+	<li>	../0/4/lbolat-04	</li>
+	<li>	../0/4/mystic04	</li>
+	<li>	../0/4/nocal04	</li>
+	<li>	../0/4/shabda04	</li>
+	<li>	../0/4/shivratri	</li>
+	<li>../0/4/ssc_04
+<ul>
+	<li>	../0/4/ssc_04/chandraprabha	</li>
+	<li>	../0/4/ssc_04/w40806	</li>
+	<li>	../0/4/ssc_04/w40807	</li>
+	<li>	../0/4/ssc_04/w40808	</li>
+	<li>	../0/4/ssc_04/w40809	</li>
+	<li>	../0/4/ssc_04/w40810	</li>
+	<li>	../0/4/ssc_04/w40811	</li>
+	<li>	../0/4/ssc_04/w40812	</li>
+	<li>	../0/4/ssc_04/w40813	</li>
+	<li>	../0/4/ssc_04/w40814	</li>
+	<li>	../0/4/ssc_04/w40815	</li>
+	<li>	../0/4/ssc_04/w40816	</li>
+	<li>	../0/4/ssc_04/w40817	</li>
+	<li>	../0/4/ssc_04/w40818	</li>
+</ul></li>
+	<li>	../0/4/unity_zikr	</li>
+	<li>	../0/4/vil_pot	</li>
+</ul></li>
+	<li>../0/5
+<ul>
+	<li>../0/5/0509-hamilton_mt
+<ul>
+	<li>	../0/5/0509-hamilton_mt/050922-hamilton_mt	</li>
+	<li>	../0/5/0509-hamilton_mt/050924-hamilton_mt	</li>
+</ul></li>
+	<li>	../0/5/beltane-05	</li>
+	<li>	../0/5/burton	</li>
+	<li>	../0/5/gina-555	</li>
+	<li>	../0/5/glob_citz	</li>
+	<li>	../0/5/hafizullah-icc	</li>
+	<li>../0/5/mystic05
+<ul>
+	<li>	../0/5/mystic05/crew	</li>
+	<li>	../0/5/mystic05/dup	</li>
+	<li>	../0/5/mystic05/mevlevi	</li>
+</ul></li>
+	<li>	../0/5/ostad_talia	</li>
+	<li>	../0/5/ssc_05	</li>
+</ul></li>
+	<li>../0/6
+<ul>
+	<li>	../0/6/esther-06	</li>
+	<li>	../0/6/hejira-06	</li>
+	<li>	../0/6/suzan_bene	</li>
+</ul></li>
+	<li>../0/7
+<ul>
+	<li>	../0/7/070108-margo	</li>
+	<li>	../0/7/coop_studies-0707	</li>
+	<li>	../0/7/dup-keystone-0707	</li>
+	<li>	../0/7/gina-0707	</li>
+</ul></li>
+	<li>../0/9
+<ul>
+	<li>	../0/9/james-09	</li>
+	<li>	../0/9/jelaleddin-0910	</li>
+	<li>	../0/9/waliali-09	</li>
+	<li>	../0/9/weltevrede-0911	</li>
+</ul></li>
+</ul></li>
+	<li>../1
+<ul>
+	<li>../1/0
+<ul>
+	<li>	../1/0/dup_heal	</li>
+	<li>	../1/0/gpd_20	</li>
+	<li>	../1/0/shabda	</li>
+	<li>	../1/0/tamam	</li>
+	<li>	../1/0/wm	</li>
+</ul></li>
+	<li>../1/1
+<ul>
+	<li>	../1/1/bst_garden	</li>
+	<li>	../1/1/csr	</li>
+	<li>	../1/1/shmal_zehra	</li>
+	<li>	../1/1/zia	</li>
+</ul></li>
+</ul></li>
+	<li>	../harland	</li>
+	<li>	../illustrator	</li>
+	<li>	../marilyn	</li>
+</ul></li>   
+
+
+</ul>
+
+</body></html>

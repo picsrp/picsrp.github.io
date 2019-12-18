@@ -1,0 +1,137 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Popped UI</title>
+<link href="div.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.x15 { opacity:0.15;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=15)";
+    filter:alpha(opacity=15);
+    zoom:1 }
+.x85 { opacity:0.85;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=85)";
+    filter:alpha(opacity=85);
+    zoom:1 }
+.ui { background-color:#6ee;
+	color:#933;
+	clear:both;
+	position:fixed;
+	right:3px;
+	top:3px; }
+/*
+.ui { background-color:#6ee;
+	color:#933;
+	position:absolute;
+	right:10%;
+	top:10%; }
+*/
+.ui1 { background-color:#1bb;
+	color:#fff; }
+.mk { background-color:#6ee;
+	color:#00f; }
+a.top_link {
+	clear:both;
+	position:fixed;
+	left:3px;
+	bottom:7px;
+	}
+
+a.top_link span{
+	position:relative;
+	top:-4px;
+	margin-left:3px;
+	font-size:0.8em;
+	font-weight:normal;
+	}
+</style>
+
+<style type="text/css">
+body {
+background-color:#888;
+color:black;
+border: 2px dashed;
+}
+.one {
+background-color:#000000;
+color:white;
+padding:5px;
+margin:5px 30px;
+opacity:0.3;
+}
+.one-one {
+background-color:red;
+opacity:0.7;
+margin:5px;
+left-margin:55px;
+padding:5px;
+}
+.one-two {
+background-color:#00CC00;
+opacity:.49;
+margin:5px;
+padding:5px;
+position:absolute;
+left:10px;
+bottom:10px;
+}
+.tre {
+background-color:#669;
+color:#a22;
+opacity:.9;
+margin:5px;
+padding:5px;
+position:absolute;
+right:5px;
+bottom:5px;
+}
+</style></head><body>
+
+
+<br/><a href="http://www.onyx-design.net/css/css-positioning/">
+Source...</a>This the BODY
+<br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1
+<div class="one"><span>This is div 1^</span>
+<br/>BR
+<div class="one-one"><span>This is div 1-1^
+<br/>it's nested in div 1.
+</span></div>
+<div class="one-two"><span>This is div 1-2,
+<br/>it's nested in div 1^
+<br/>screen!
+</span></div>
+</div>
+<div class="tre"><span>This is div 3,
+<br/>it's not nested in a div
+<br/>screen!
+</span></div>
+
+<div class="ui x85"
+title=85 onClick="title=100-title; this.className='ui x'+title;"
+><pre>   (Click/Again...)
+<span class="mk"><span class="ui1">MOUSE between PICS</span></span>
+<span class="mk">drag</span>	move pic to dest
+<span class="mk"><span class="ui1">MOUSE MARKS on PICS</span></span>
+<span class="mk">click</span>	specific pic
+<span class="mk">l2r</span>	gest for all below
+<span class="mk">r2l</span>     gest for all above
+<span class="mk"><span class="ui1">KEYED ACTIONS</span></span>
+<span class="mk">f l</span>	<em>F</em>irst <em>L</em>ast sendto
+<span class="mk">g s</span>	<em>G</em>row <em>S</em>hrink
+<span class="mk">w t</span>	<em>W</em>eb <em>T</em>humb resize
+<span class="mk">u d a</span>	<em>U</em>n/<em>D</em>elete <em>A</em>ll
+</pre>Full interface <a href="if-how.htm">HowTo</a>
+</div>
+
+<div align="center">
+<img class="x85" src="../buttons/real.gif" title="85"
+onClick="title=100-title; this.className='x'+title;"
+id="Imgrl" height="90">
+<!--
+onClick="alt=100-alt; this.className='ui x'+alt;"
+onClick="this.className='x75';"
+onDblClick="this.className='x25';"
+-->
+</div><br>
+
+
+</body> </html>

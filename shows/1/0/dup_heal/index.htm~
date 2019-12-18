@@ -1,0 +1,56 @@
+<html><head><title>GPD_20</title>
+<script type="text/javascript" src="../../../../globals/picif.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+
+</head>
+<body onload="picif_start();" >
+
+
+<img class="thum" align="right" height=250 onDblClick="height=250"
+onClick="height=ff*height;"
+src="web/m51011034191t2.jpg">
+
+<center>
+<a href="http://i.tgu.ca/pics-10-dup_heal">
+i.tgu.ca/<br />
+<font size="+1">
+	pics-10-dup_heal
+</font>
+</a>
+</center>
+
+<div class="float">
+<font size="+1">
+<a href="http://www.google.com/search?q=dup+%22global+peace+dance%22">DUP Seattle Healing Practice</a>
+<br />10-11-03
+
+</font>
+</div>
+
+<br/>
+<font size="">
+
+<div class="float">
+
+<a href="http://pics.tgu.ca">
+<font color="red" size="+2">All Shows</font> </a>
+<br />
+<a href="../../../../globals/if-how.htm">Interface HowTo</a>
+<br />
+<a href="../../../../globals/contact.htm">contact & copyright</a>
+<br/>
+
+</div>
+
+<div class="pic float"><img height=99  id="m51011034195" src="thm/m51011034195.jpg">   <p>m51011034195</p><br /></div>
+<div class="pic float"><img height=99  id="m51011034191t2" src="thm/m51011034191t2.jpg">   <p>m51011034191t2</p><br /></div>
+<div class="pic float"><img height=99  id="m51011034184" src="thm/m51011034184.jpg">   <p>m51011034184</p><br /></div>
+<div class="pic float"><img height=99  id="m51011034183" src="thm/m51011034183.jpg">   <p>m51011034183</p><br /></div>
+<div class="pic float"><img height=99  id="m51011034204" src="thm/m51011034204.jpg">   <p>m51011034204</p><br /></div>
+
+<!--
+"m51011034204.jpg" "m51011034183.jpg" "m51011034184.jpg" "m51011034191t2.jpg" "m51011034195.jpg" 
+-->
+
+</font>
+</body></html>

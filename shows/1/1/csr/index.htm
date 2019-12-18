@@ -1,0 +1,215 @@
+<html><head><title>CSR Thanksgiving Dinner in May 2011</title>
+<base href="http://db.tgu.ca/srp/shows/1/1/csr/i.htm">
+<script type="text/javascript" src="../../../../globals/picif.js"></script>
+<!--
+http://db.tgu.ca/srp/shows/1/1/csr/index.htm
+http://i.tgu.ca/pics-11-csr
+-->
+
+<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+//  picif_start();	// a dup`ed exec...
+  FIRST="OFF";
+  FIRSTSRC="OFF";
+  loop = new Array;
+  time=400;
+  ANYACTION=1;
+  bfr="url('"; aft="')";
+  dwell=2;
+  var FIRSTSRCocc= new Boolean();
+  inc=1;
+  lpl=0;
+  stop=1;
+  $(".pic>img").each(function(){  this.height=99;  });
+
+function run(){
+  $('#targ').delay(1000*dwell).show(1,function(){
+    if(1>stop){
+      inc+=1; if(lpl<inc)inc=1;
+      FIRST.src=loop[inc-1];
+      run();}
+  });
+}
+ $(".r").click(function(event){
+    stop=1;
+    if(FIRSTSRCocc)FIRST.src=FIRSTSRC;
+ });
+
+  $(".l").click(function(event){
+//	alert("FIRSTSRCocc: "+FIRSTSRCocc);
+	if(FIRSTSRCocc)FIRST.src=FIRSTSRC;
+	FIRSTSRCocc=true;
+    loop = new Array;
+	$(this.parentNode).find(".pic:first>img").each(function(){
+		this.setAttribute('id','targ');
+		FIRST=this;  FIRSTSRC=FIRST.src;  });
+	$(this.parentNode).find(".pic>img").each(function(){
+		loop.push(this.src);  });
+		lpl=loop.length;
+		dwell=$("#dwellin").val();
+	stop=0;
+	run();
+   });
+
+
+  $(".input:text:first").focus();
+
+  $(".note").click(function(event){
+    this.innerHTML="\n<br \>lpl="+lpl+"\n<br \>"+this.innerHTML;
+    this.innerHTML="\n<br \>dwell="+dwell+"\n<br \>"+this.innerHTML;
+    this.innerHTML="\n<br \>FIRSTSRC="+FIRSTSRC+"\n<br \>"+this.innerHTML;
+  });
+ });
+</script>
+<style  type="text/css">
+.pic  {font-size: smaller;
+}
+.move  {font-size: 250%;
+}
+.pic img  {//height:108
+}
+.note  {float: left;
+  border: 1px solid
+}
+.l  {float: left;
+	color:red;
+	font-size: 700%;
+	text-align: center;
+}
+.r  {float: left;
+	color:red;
+	font-size: 700%;
+	text-align: center;
+}
+.c	{  font-size: 14%;
+    color:gray;
+}
+.red  {color:red
+}
+</style>
+
+</head>
+<body onload="picif_start();" >
+
+<div class="note"></div>
+
+<img class="thum" align="right" height=200 onDblClick="height=200"
+onClick="height=ff*height;"
+src="web/m51105096172t4.jpg" alt="">
+
+<div><center>
+<a href="http://i.tgu.ca/pics-11-csr">
+	<font size="+1">
+		http://i.tgu.ca/
+		<br />pics-11-csr
+		</font></a>
+</center></div>
+
+<div class="float">
+	<font size="+1">
+
+	<em>CSR Thanks Dinner</em>
+	<br />in May 2011
+	<p />
+	</font>
+</div>
+
+<div class="float">
+	<a href="http://pics.tgu.ca">
+	<font color="red" size="+2">All Shows</font></a>
+	<br />
+	<a href="../../../../globals/if-how.htm">UI HowTo</a>
+	<br />
+	<a href="../../../../globals/contact.htm">contact & copyright</a>
+	<br />
+</div>
+
+<br />
+<!--
+<font size="+1">
+-->
+
+<hr width="30%" />
+Use the <b>UI</b> to reSize and reArrange PICS. [keyboard & pointer]
+<br /><span class="red">NB.</span> If the <b>UI</b> loses FOCUS: <b>Click</b>ing on witespace should find it!
+
+<br /><b>Click</b> on a <span class="red">{</span> to rotate its subgroup
+<br /><b>Click</b> on any <span class="red">}</span> to end a rotation.
+<br /><b>Click</b> on an image to grow. [and to set marker in UI]
+<br />Before a rotation <b>Set dwell</b> time in second`s:
+	<input id="dwellin" name="dwell" type="text" value="2" style="background: pink; color: blue;"/>
+<!--
+	<font color="red" size="+2"><input id="dwellin" name="dwell" type="text" value="123"/></font>
+	thumb size:<input id="thumb_set" name="thumb_size" type="text" value="100"/>
+	web size:<input id="web_set" name="web_size" type="text" value="450"/>
+-->
+<hr width="30%" />
+
+<!--
+-->
+
+<div class="mark">
+<div class="l">{<span class="c">al</span></div>
+
+	<div class="mark">
+	<div class="l">{<span class="c">din</span></div>
+
+		<div class="mark">
+		<div class="l">{<span class="c">dg</span></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096194  "src="thm/m51105096194.jpg "> <p>m51105096194  </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096193  "src="thm/m51105096193.jpg "> <p>m51105096193  </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096192  "src="thm/m51105096192.jpg "> <p>m51105096192  </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096182t5"src="thm/m51105096182t5.jpg"> <p>m51105096182t5</p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096188  "src="thm/m51105096188.jpg "> <p>m51105096188  </p><br /></div>
+		<div class="r">}</div>
+		</div><!-- end mark dg grouping	-->
+
+		<div class="mark">
+		<div class="l">{<span class="c">dp</span></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096194g "src="thm/m51105096194g.jpg"> <p>m51105096194g </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096194h "src="thm/m51105096194h.jpg"> <p>m51105096194h </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096194d "src="thm/m51105096194d.jpg"> <p>m51105096194d </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096194v "src="thm/m51105096194v.jpg"> <p>m51105096194v </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096188j "src="thm/m51105096188j.jpg"> <p>m51105096188j </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096188z "src="thm/m51105096188z.jpg"> <p>m51105096188z </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096192m "src="thm/m51105096192m.jpg"> <p>m51105096192m </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096188l "src="thm/m51105096188l.jpg"> <p>m51105096188l </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096192t "src="thm/m51105096192t.jpg"> <p>m51105096192t </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51105096192b "src="thm/m51105096192b.jpg"> <p>m51105096192b </p><br /></div>
+		<div class="r">}</div>
+		</div><!-- end mark dp grouping	-->
+
+	<div class="r">}</div>
+	</div><!-- end mark din grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">sit</span></div>
+<div class="pic float"><img height=99  alt=""id="m51105096152  "src="thm/m51105096152.jpg "> <p>m51105096152  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096145  "src="thm/m51105096145.jpg "> <p>m51105096145  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096146  "src="thm/m51105096146.jpg "> <p>m51105096146  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096147  "src="thm/m51105096147.jpg "> <p>m51105096147  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096148  "src="thm/m51105096148.jpg "> <p>m51105096148  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096149  "src="thm/m51105096149.jpg "> <p>m51105096149  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096150  "src="thm/m51105096150.jpg "> <p>m51105096150  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096157  "src="thm/m51105096157.jpg "> <p>m51105096157  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096164  "src="thm/m51105096164.jpg "> <p>m51105096164  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096165t7"src="thm/m51105096165t7.jpg"> <p>m51105096165t7</p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096171  "src="thm/m51105096171.jpg "> <p>m51105096171  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096172t4"src="thm/m51105096172t4.jpg"> <p>m51105096172t4</p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096177  "src="thm/m51105096177.jpg "> <p>m51105096177  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096197  "src="thm/m51105096197.jpg "> <p>m51105096197  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096200  "src="thm/m51105096200.jpg "> <p>m51105096200  </p><br /></div>
+<div class="pic float"><img height=99  alt=""id="m51105096203  "src="thm/m51105096203.jpg  "> <p>m51105096203  </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark sit grouping	-->
+
+<div class="r">}</div>
+</div><!-- end mark all grouping	-->
+
+<!--</font>
+-->
+</body></html>
+

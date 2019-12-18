@@ -1,0 +1,194 @@
+<html><head><title>Pir Zia in Seattle 11/11</title>
+<base href="http://db.tgu.ca/srp/shows/1/1/zia/i.htm">
+<script type="text/javascript" src="../../../../globals/picif.js"></script>
+<!--
+-->
+<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<!--
+http://i.tgu.ca/pics-05-zia
+-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+//  picif_start();	// a dup`ed exec...
+  FIRST="OFF";
+  FIRSTSRC="OFF";
+  loop = new Array;
+  time=400;
+  ANYACTION=1;
+  bfr="url('"; aft="')";
+  dwell=2;
+  var FIRSTSRCocc= new Boolean();
+  inc=1;
+  lpl=0;
+  stop=1;
+  $(".pic>img").each(function(){  this.height=99;  });
+
+function run(){
+  $('#targ').delay(1000*dwell).show(1,function(){
+    if(1>stop){
+      inc+=1; if(lpl<inc)inc=1;
+      FIRST.src=loop[inc-1];
+      run();}
+  });
+}
+ $(".r").click(function(event){
+    stop=1;
+    if(FIRSTSRCocc)FIRST.src=FIRSTSRC;
+ });
+
+  $(".l").click(function(event){
+//	alert("FIRSTSRCocc: "+FIRSTSRCocc);
+	if(FIRSTSRCocc)FIRST.src=FIRSTSRC;
+	FIRSTSRCocc=true;
+    loop = new Array;
+	$(this.parentNode).find(".pic:first>img").each(function(){
+		this.setAttribute('id','targ');
+		FIRST=this;  FIRSTSRC=FIRST.src;  });
+	$(this.parentNode).find(".pic>img").each(function(){
+		loop.push(this.src);  });
+		lpl=loop.length;
+		dwell=$("#dwellin").val();
+	stop=0;
+	run();
+   });
+
+
+  $(".input:text:first").focus();
+
+  $(".note").click(function(event){
+    this.innerHTML="\n<br \>lpl="+lpl+"\n<br \>"+this.innerHTML;
+    this.innerHTML="\n<br \>dwell="+dwell+"\n<br \>"+this.innerHTML;
+    this.innerHTML="\n<br \>FIRSTSRC="+FIRSTSRC+"\n<br \>"+this.innerHTML;
+  });
+ });
+</script>
+<style  type="text/css">
+.pic  {font-size: smaller;
+}
+.move  {font-size: 250%;
+}
+.pic img  {//height:108
+}
+.note  {float: left;
+  border: 1px solid
+}
+.l  {float: left;
+	color:red;
+	font-size: 700%;
+	text-align: center;
+}
+.r  {float: left;
+	color:red;
+	font-size: 700%;
+	text-align: center;
+}
+.c	{  font-size: 14%;
+    color:gray;
+}
+.red  {color:red
+}
+</style>
+
+</head>
+<body onload="picif_start();" >
+
+<div class="note"></div>
+
+<p align="right">pic of <b>Hazrat Inayat Khan</b> from
+<a href="http://wahiduddin.net">wahiduddin.net</a></p>
+<img class="thum" align="right" height=200 onDblClick="height=200"
+onClick="height=ff*height;"
+src="http://wahiduddin.net/hik/images/hik_1921_ed_450w.jpg" alt="">
+
+<div><center>
+<a href="http://i.tgu.ca/pics-11-zia">
+	<font size="+1">
+		http://i.tgu.ca/
+		<br />pics-11-zia
+		</font></a>
+</center></div>
+
+<div class="float">
+	<font size="+1">
+
+		<a href="http://www.sevenpillarshouse.org/calendar/item/the_journey_from_birth_to_death/">
+		<em>Pir Zia</em> 11/11/11</a>
+	<br />at <a href="http://www.seattlemountaineers.org/">Mountaineers in Seattle</a>
+	<br /><a href="http://soi-seattle.org/"><em>by SOI Seattle</em></a>
+	<br />November 2011
+	<p />
+	</font>
+</div>
+
+<div class="float">
+	<a href="http://pics.tgu.ca">
+	<font color="red" size="+2">All Shows</font></a>
+	<br />
+	<a href="../../../../globals/if-how.htm">UI HowTo</a>
+	<br />
+	<a href="../../../../globals/contact.htm">contact & copyright</a>
+	<br />
+</div>
+
+<br />
+<!--
+<font size="+1">
+-->
+
+<hr width="30%" />
+Use the <b>UI</b> to reSize and reArrange PICS. [keyboard & pointer]
+<br /><span class="red">NB.</span> If the <b>UI</b> loses FOCUS: <b>Click</b>ing on witespace should find it!
+
+<br /><b>Click</b> on a <span class="red">{</span> to rotate its subgroup
+<br /><b>Click</b> on any <span class="red">}</span> to end a rotation.
+<br /><b>Click</b> on an image to grow. [or to set marker in UI]
+<br />Before a rotation <b>Set dwell</b> time in second`s:
+	<input id="dwellin" name="dwell" type="text" value="2" style="background: pink; color: blue;"/>
+<!--
+	<font color="red" size="+2"><input id="dwellin" name="dwell" type="text" value="123"/></font>
+	thumb size:<input id="thumb_set" name="thumb_size" type="text" value="100"/>
+	web size:<input id="web_set" name="web_size" type="text" value="450"/>
+-->
+<hr width="30%" />
+
+<div class="mark">
+<div class="l">{<span class="c">al</span></div>
+
+	<div class="mark">
+	<div class="l">{<span class="c">11</span></div>
+	<div class="pic float"><img height=99  alt=""id="m51111117218t0"src="tss/m51111117218t0.jpg"> <p>m51111117218t0    </p><br /></div>
+	<div class="pic float"><img height=99  alt=""id="m51111117182  "src="tss/m51111117182.jpg">   <p>m51111117182      </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark 11th grouping	-->
+
+	<div class="mark">
+	<div class="l">{<span class="c">12</span></div>
+
+		<div class="mark">
+		<div class="l">{<span class="c">cr</span></div>
+		<div class="pic float"><img height=99  alt=""id="m51111127397  "src="tss/m51111127397.jpg">   <p>m51111127397      </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51111127398  "src="tss/m51111127398.jpg">   <p>m51111127398      </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m51111127399  "src="tss/m51111127399.jpg">   <p>m51111127399      </p><br /></div>
+		<div class="r">}</div>
+		</div><!-- end mark crowd grouping	-->
+
+		<div class="mark">
+		<div class="l">{<span class="c">z</span></div>
+		<div class="pic float"><img height=99  alt=""id="m71111122739p0"src="tss/m71111122739p0.jpg"> <p>m71011122739p0    </p><br /></div>
+		<div class="pic float"><img height=99  alt=""id="m71111122746  "src="tss/m71111122746.jpg">   <p>m71011122746      </p><br /></div>
+		<div class="r">}</div>
+		</div><!-- end mark zia grouping	-->
+
+	<div class="pic float"><img height=99  alt=""id="m81111121767  "src="tss/m81111121767.jpg">   <p>m81111121767      </p><br /></div>
+	<div class="r">}</div>
+	</div><!-- end mark 12th grouping	-->
+
+<div class="r">}</div>
+</div><!-- end mark all grouping	-->
+
+<!--</font>
+-->
+</body></html>

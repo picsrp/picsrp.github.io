@@ -1,0 +1,43 @@
+<html><head><title>TweitKu Poetry Widget</title>
+	<script src="./js/widget.js"></script>
+	<meta http-equiv="Content-Type" content="text/css; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="../../globals/div.css">
+</head><body>
+<div style="float:right"> <img src="./real.gif"></div>
+i also stash shortform* writings at
+<a href="http://identi.ca/tweitku">
+http://identi.ca/tweitku</a>,
+<br />*twittering shortforms:* < 140 characters; % is an outline break.
+
+<div id="twits">
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 9999,
+  interval: 500,
+  width: 300,
+  height: 270,
+  theme: {
+    shell: {
+      background: '#ffffff',
+      color: '#654321'
+    },
+    tweets: {
+      background: '#444444',
+      color: '#f1f2f3',
+      links: '#4aed05'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('TweitKu').start();
+</script>
+</div></body></html>

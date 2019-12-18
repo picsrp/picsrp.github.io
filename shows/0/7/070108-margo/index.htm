@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Margo at Habib's Fete</title>
+<script type="text/javascript" src="../../../../globals/picif.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+
+<script type="text/javascript">
+$(document).ready(function(){
+  picif_start();
+  FIRST="OFF";
+  FIRSTSRC="OFF";
+  loop = new Array;
+  time=400;
+  ANYACTION=1;
+  bfr="url('"; aft="')";
+  dwell=222;
+  inc=1;
+  lpl=0;
+  stop=1;
+  $(".pic>img").each(function(){  this.height=99;  });
+
+function run(){
+  $('#targ').delay(10*dwell).show(1,function(){
+    if(1>stop){
+      inc+=1; if(lpl<inc)inc=1;
+      FIRST.src=loop[inc-1];
+      run();}
+  });
+}
+ $(".r").click(function(event){
+    stop=1;
+    FIRST.src=FIRSTSRC;
+    loop = new Array;
+ });
+
+  $(".l").click(function(event){
+    $(this.parentNode).find(".pic:first>img").each(function(){
+      this.setAttribute('id','targ');
+      FIRST=this;  FIRSTSRC=FIRST.src;  });
+    $(this.parentNode).find(".pic>img").each(function(){
+      loop.push(this.src);  });
+      lpl=loop.length;
+      dwell=$("#dwellin").val();
+    stop=0;
+    run();
+   });
+
+
+//  $(".input:text:first").focus();
+
+ });
+</script>
+
+</head>
+<body onload="picif_start();" >
+
+
+<div class="head">
+<a href="http://pics.tgu.ca">
+<font color="red" size="+2">All Shows</font>
+<br/><font color="red" size="+2">(pics.tgu.ca)</font> </a>
+<br/>
+<a href="../../../../globals/if-how.htm">Interface HowTo</a>
+<br/>
+<a href="http://i.tgu.ca/pics-070108-margo">
+<font color="green" size="+2">This Show</font>
+<br/><font color="green" size="+2">(pics-070108-margo)</font> </a>
+<br/>
+<a href="../../../../globals/contact.htm">contact & copyright</a>
+</div>
+
+<div class="head">
+<font size="+2">
+<em>Margo at Habib's Fete</em><br/>
+07/01/08
+</font>
+</div>
+
+|<hr/>|<hr/>|<hr/>|<hr/>|<hr/>
+
+<font size="-1">
+
+<div align="middle" class="spacer"><hr width=35%/><font size="+2">
+dwell time:<input id="dwellin" name="dwell" type="text" value="250"/>
+</font><hr width=35%/></div>
+
+<div class="mark">
+  <div class="l">{</div>
+	<div class="pic"><img height=99 src="web/m70701084653p5.jpg"  alt="m70701084653p5" id="m70701084653p5"><p>m70701084653p5</p></div>
+	<div class="pic"><img height=99 src="web/m70701084659.jpg"  alt="m70701084659" id="m70701084659"><p>m70701084659</p></div>
+	<div class="pic"><img height=99 src="web/m70701084659p1.jpg"  alt="m70701084659p1" id="m70701084659p1"><p>m70701084659p1</p></div>
+	<div class="pic"><img height=99 src="web/m70701084659t1.jpg"  alt="m70701084659t1" id="m70701084659t1"><p>m70701084659t1</p></div>
+	<div class="pic"><img height=99 src="web/m70701084690.jpg"  alt="m70701084690" id="m70701084690"><p>m70701084690</p></div>
+<div class="r">}</div></div>
+
+</body> </html>

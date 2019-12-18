@@ -1,0 +1,103 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Popped UI</title>
+
+<style type="text/css">
+//	http://www.webmasterworld.com/forum21/11590.htm
+html {
+border:none;
+overflow:hidden;
+}
+body {
+margin: 0;
+padding: 0;
+border:none;
+overflow:hidden;
+}
+</style>
+
+<style type="text/css">
+.x15 { opacity:0.15;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=15)";
+    filter:alpha(opacity=15);
+    zoom:1 }
+.x85 { opacity:0.85;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=85)";
+    filter:alpha(opacity=85);
+    zoom:1 }
+.ui { background-color:#8ff;
+	color:#711;
+//	clear:both;
+	overflow:hidden;
+	position:fixed;
+	left:0;
+	top:0; }
+.ui1 { background-color:#1bb; color:#fff; }
+.mk {color:#00a; }
+</style>
+
+<!--
+ondblclick="this.height=10"
+-->
+<div height=110 width=33 class="ui x85"
+title=85 onClick="title=100-title; this.className='ui x'+title;"
+>
+<div style="line-height:80%;
+	color:#311;
+	position:absolute;
+	font-size:150%;
+	letter-spacing:2px;
+	left:23%;
+	top:-2px;"
+	>Interface</div>
+<!--div style="background-color:#eaa;
+	color:#066;
+	position:absolute;
+	right:0;
+	top:0;
+//	line-height:80%;
+	text-align:center"
+>hide<br/>show</div-->
+
+<a href="if-how.htm">
+<div style="background-color:#eaa;
+	color:#066;
+	position:absolute;
+	left:0;
+	top:p;
+	line-height:90%;
+	text-align:center"
+>Details</div></a>
+
+<div style="//background-color:#eaa;
+	color:#066;
+	position:absolute;
+	right:-5;
+	top:-8;
+//	line-height:90%;
+	text-align:center"
+>
+<a href="contact.htm">
+<img border=0 height=40 src="tguca-logo.png"
+onmouseout="src='tguca-logo.png';"
+onmouseover="src='tguca-logo-mid.png';"
+>
+</a>
+</div>
+
+<pre>
+
+<span class="mk"><span class="ui1">MOUSE between PICS</span></span>
+<span class="mk">drag</span>	move pic to dest
+<span class="mk"><span class="ui1">MOUSE MARKS on PICS</span></span>
+<span class="mk">click</span>	specific pic
+<span class="mk">l2r</span>	gesture: all-below
+<span class="mk">r2l</span>	gesture: all-above
+<span class="mk"><span class="ui1">KEYED ACTIONS</span></span>
+<span class="mk">f l</span>   <em>F</em>irst <em>L</em>ast (sendto)<!--<span class="mk">p</span>	<em>P</em>ics: (select all)-->
+<span class="mk">g s p</span> <em>G</em>row <em>S</em>hrink <em>P</em>ics(sel all)
+<span class="mk">w t</span>   <em>W</em>eb <em>T</em>humb (resize)
+<span class="mk">u d a</span> <em>U</em>n/<em>D</em>elete <em>A</em>ll
+</pre>
+
+</div></body> </html>

@@ -1,0 +1,63 @@
+/* Title{gh-div} Files{gh-classic.gif} */
+body{
+	color: #000;
+	font-family: Arial, Helvetica, Sans-Serif;
+	background: #fff;
+	margin-top: 0px;
+}
+<!-- background: #808080 url(gh-classic.gif) repeat-y;
+-->
+
+body.contents{
+	background: #eee;
+	margin-left: 5px;
+}
+
+div.float {float: left;
+	text-align: center;}  
+div.float p {text-align: center;}
+div.container {
+	border: 6px dashed #333;
+	background-color: #999;}
+div.picture {text-align: center;
+	float: left;
+	border: 5px dashed #fff;
+	background-color: white;
+	text-color: black;
+	}
+div.spacer {clear: both;}
+
+a:active{color: #ff0000;}
+a:link{color: #440;}
+a:visited{color: #040;}
+a:hover{color: #ff0000;}
+p.contents{
+	font-size: x-small;
+	font-weight: normal;
+	text-align: left;
+}
+table.indent{margin-left: 260px;}
+td{
+	color: #ffffff;
+	font-family: Arial, Helvetica, Sans-Serif;
+}
+td.image{background-color: #ffffff;}
+td.thumb{
+	font-size: x-small;
+	font-weight: normal;
+	text-align: center;
+}
+td.title{font-weight: bold;}
+td.info{font-weight: bold;}
+td.small{
+	font-size: small;
+	font-style: italic;}
+img.contents{border: thin solid #ffffff;}
+img.thum{border-color: red ;
+	wwidth: 133px}
+img.thumb{border: 0 solid #ffffff;
+	onClick: width=ff*width;
+	width: 133px}
+img.main{border: thick solid #ffffff;}
+.thickborder{border: thick solid #ffffff;}
+.center{text-align: center;}

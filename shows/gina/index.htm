@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>Gina Salá</title>
+<script type="text/javascript" src="./gina.js"></script>
+<style>
+img {border: 2px solid #c00;}
+</style>
+<!--
+  http://i.tgu.ca/pics-gina
+  http://db.tgu.ca/srp/shows/gina/index.htm
+  http://i.tgu.ca/pics-gina_select
+  http://db.tgu.ca/srp/shows/gina/index.htm#s
+-->
+</head><body onload="gini()" >
+<h2><a href="http://ginasala.com">Gina Salá</a> Pictures</h2>
+
+<div>
+These pics are each portals onto websites.
+Initially they are thumbnails, but they can be
+<span onclick="rez++;tw=1" style="font-size: 130%;border:1px solid;color:#c31;">increased</span>
+in size and resolution. Or
+<span onclick="rez=2" style="font-size: 130%;border:1px solid;color:#c31;">reset</span>
+to thumb size.
+<p />
+Easiest on the shuffling of screen real estate is to NOT increase until all pics are selected, then browse selected, or cycle autonomously as a slideshow.
+<p />
+From this page you can view pictures of Gina; go to the page which holds those pics (and others); save pics to a selected list; view in a slide show; and of course there is an Easter Egg*.
+</div>
+<!--	--	--	--	--	--	--	--	iface	--	--	--	--	--	--	--	--	-->
+<div style="float: right; width: 48%; ">
+<b>keyboard</b><br />
+<b>HJKL</b> move around lists<br />
+<b>J & K</b> move within a list<br />
+<b>H & L</b> move between lists<br />
+<b>CR C</b>opies pic to selection (or <b>D</b>eletes if focused)<br />
+<b>S</b>`low or <b>S</b>`tart a <b>S</b>lide<b>S</b>how on <b>S</b>elected<br />
+<b>I</b>`ncrease image sizes &
+<b>R</b>`eset image sizes<br />
+</div>
+
+<div style="padding-right: 52%; text-align:right">
+<b>mouse</b><br />
+<b>Click</b> moves to next pic in list<br />
+<b>MouseDown</b> + <b>Drag Out</b> moves to prev pic<br />
+Pics can be <b>Dragged To</b> select list<br />
+<b>DoubleClick</b> opens pics website<br />
+<b>`` on select</b> slows or starts slideshow<br />
+<b>MouseOver</b> picks list<br />
+</div>
+
+<div style="text-align:center;">
+Or have a SlideShow with
+<span onclick="everything();simg.src='http://i.tgu.ca/pics-gina_ms'" style="font-size: 130%;border:1px solid;color:#c31;"><b>E</b>`verything</span> in it.
+</div>
+
+<hr /><br />
+<!--	--	--	--	--	--	--	--	pics	--	--	--	--	--	--	--	--	-->
+<div style="float: right; width: 50%; ">
+<div style="color:#c82;">The light of Gina<br />
+<img id="0" width="133"
+onmouseover="base=0;fs();width=rez*70"
+ondblclick="parent.location='http://i.tgu.ca/pics-gina-555'"
+onclick="incPic(0);nextPic(0)"
+onmousedown="mdb=0;prevPic(0);return false"
+src="http://db.tgu.ca/srp/shows/0/5/gina-555/web/a1021243.jpg"
+title="a1021243.jpg"/>
+<br />is going national</div>
+
+<div style="color:#d64;">
+Soon she will be making
+<br />
+<img id="1" width="133"
+onmouseover="base=1;fs();width=rez*70"
+ondblclick="parent.location='http://i.tgu.ca/pics-mystic04'"
+onclick="incPic(1);nextPic(1)"
+onmousedown="mdb=1;prevPic(1);return false"
+src="http://db.tgu.ca/srp/shows/0/4/mystic04/web/a1006991.jpg"
+title="a1006991">
+<br />less of the local calls</div>
+
+<div style="color:#e46;">
+To get her darshan
+<br />
+<img id="2" width="133"
+onmouseover="base=2;fs();width=rez*70"
+ondblclick="parent.location='http://tgu.ca/pix/gina.htm'"
+onclick="incPic(2);nextPic(2)"
+onmousedown="mdb=2;prevPic(2);return false"
+src="http://tgu.ca/pix/intiman-04-t.jpg"
+title="intiman-13-t">
+<br />be with her now</div>
+
+<div style="color:#f2a;">
+while it is
+<br />
+<img id="3" width="133"
+onmouseover="base=3;fs();width=rez*70"
+ondblclick="parent.location='http://i.tgu.ca/pics-gina_0707'"
+onclick="incPic(3);nextPic(3)"
+onmousedown="mdb=3;prevPic(3);return false"
+src="http://db.tgu.ca/srp/shows/0/7/gina-0707/web/7d016333.jpg"
+title="7d016333.jpg">
+<br />still informal</div>
+</div>
+<!--	--	--	--	--	--	--	--	select	--	--	--	--	--	--	--	-->
+<div id="s" style="padding-right: 50%; ">
+Selected<br />
+<img id="4" width="133"
+onmouseover="base=4;fs();width=rez*70"
+onclick="incPic(4);nextPic(4)"
+onmousedown="mdb=4;prevPic(4)"
+onmouseup="if(mdb<llm1)dragPic();"
+ondblclick="if(1==ival){slideshow();simg.src='http://i.tgu.ca/pics-gina_ms'}; ival++;"
+src="" title="" />
+<br />pictures</div>
+
+<!--	--	--	--	--	--	--	--	footer	--	--	--	--	--	--	--	-->
+<hr /><div><span id='addy' style="color:#dec"
+onclick="document.getElementById('addy').style.color = 'black'">
+The interface relies on Javascript and CSS. Everthing works fine under <b>Opera, Chrome</b> and <b>FireFox</b>. Of course one cannot test everything, and somehow with so many features it is likely to fail under such not as various older <b>Internet Exploders</b>, oh well, it does meet the standards obeying browsers anyway. i would be interested to know how this interface fares under <b>Apple</b>, <b>Android</b> or <b>iOS</b> browsers though ...  so give me a
+<a href="mailto:krsnadas.srp@gmail.com">jingle</a> (or for more pics).
+</span>
+<p />
+*<span id='hint' style="color:#cea"
+onclick="document.getElementById('hint').style.color = 'black'">
+Hint, it is two keystrokes starting with a ~
+</span></div>
+
+</body></html>

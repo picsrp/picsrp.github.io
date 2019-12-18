@@ -1,0 +1,9 @@
+<html><head><title>Water Color Painting Nov '04</title>
+<script type="text/javascript" src="../../../../globals/picif.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+</head>
+<body onload="picif_start();" >
+<img align="right" height=350 onDblClick="height=350"
+onClick="height=ff*height;" src="http://db.tgu.ca/srp/shows/0/4/nocal04/web/cr004081.jpg">
+
+</font></body></html>

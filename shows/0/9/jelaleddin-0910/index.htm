@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Jelaleddin Retreat</title>
+<script type="text/javascript" src="../../../../globals/picif.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../globals/div.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  picif_start();
+  FIRST="OFF";
+  FIRSTSRC="OFF";
+  loop = new Array;
+  time=400;
+  ANYACTION=1;
+  bfr="url('"; aft="')";
+  dwell=22;
+  inc=1;
+  lpl=0;
+  stop=1;
+  $(".pic>img").each(function(){  this.height=55;  });
+
+function run(){
+  $('#targ').delay(10*dwell).show(1,function(){
+    if(1>stop){
+      inc+=1; if(lpl<inc)inc=1;
+      FIRST.src=loop[inc-1];
+      run();}
+  });
+}
+ $(".r").click(function(event){
+    stop=1;
+    FIRST.src=FIRSTSRC;
+    loop = new Array;
+ });
+
+  $(".l").click(function(event){
+    $(this.parentNode).find(".pic:first>img").each(function(){
+      this.setAttribute('id','targ');
+      FIRST=this;  FIRSTSRC=FIRST.src;  });
+    $(this.parentNode).find(".pic>img").each(function(){
+      loop.push(this.src);  });
+      lpl=loop.length;
+      dwell=$("#dwellin").val();
+    stop=0;
+    run();
+   });
+
+
+  $(".input:text:first").focus();
+
+  $(".note").click(function(event){
+    this.innerHTML= "\n<br \>lpl= "+lpl+"\n<br \>"+this.innerHTML;
+    this.innerHTML= "\n<br \>dwell= "+dwell+"\n<br \>"+this.innerHTML;
+    this.innerHTML= "\n<br \>FIRSTSRC= "+FIRSTSRC+"\n<br \>"+this.innerHTML;
+  });
+ });
+</script>
+<style  type="text/css">
+.pic  {font-size: smaller;
+  }
+.move  {font-size: 250%;
+  }
+.pic img  {//height:108
+}
+.note  {float: left;
+  border: 1px solid}
+.l  {float: left;
+    color:red;
+  font-size: 700%;
+  text-align: center;}
+.r  {float: left;
+    color:red;
+  font-size: 700%;
+  text-align: center;}
+.cnb  {//color:red
+}
+</style>
+</head>
+<body onload="picif_start();" >
+
+<img src="http://bit.ly/jelaleddin-0910" />
+<!--
+http://dl.dropbox.com/u/3595000/srp/shows/jelaleddin-0910/../../../../globals/icon/bg.gif"
+-->
+
+<title>rotate subtrees of images</title></head><body>
+
+<img class="thum" align="right" height=250 onDblClick="height=250"
+onClick="height=ff*height;"
+src="web/0910188946.jpg">
+
+<img align="left" height=70 src="web/0910188724.jpg">
+
+<a href="http://db.tgu.ca/srp/shows/0/9/jelaleddin-0910">
+<font size="+1">
+<table border=0 align="middle" valign="middle">
+<tr align="middle">
+	<td>http://db.tgu.ca</td></tr>
+<tr align="middle">
+	<td>/shows/0/9/</td></tr>
+<tr align="middle">
+	<td>jelaleddin-0910</td></tr>
+</table></font>
+</a>
+
+
+<em>Turning</em>
+<br/>
+<font size="-1">with</font>
+<font size="+1">
+<a href="http:// .htm">
+Jelaleddin</a><br/>
+Odd Fellowes Hall & Whidbey Isl<br/>
+9/10/16-8
+</font>
+
+<br/>
+<font size="+1">
+<table border=1
+align="middle" valign="middle">
+<tr align="middle"><td>
+<a href="http://pics.tgu.ca">
+<font color="red" size="+2">All Shows</font> </a>
+<br/>:<br/>
+<a href="../../../../globals/if-how.htm">Interface HowTo</a>
+<br/>:<br/>
+<a href="../../../../globals/contact.htm">contact & copyright</a>
+</td></tr></table></font>
+
+<hr width="30%" />
+<br /><font size="+3">A mockup with image rotational capabilities...</font>
+<p />Use the UI to reSize and reArrange PICS.
+<br />click on left parenthesis to start rotation of images in its subgroup to the FIRST image...
+<br />NB. If the UI loses FOCUS: clicking on witespace should find it!
+<br />click on right parenthesis to end a rotation.
+
+<br /><br />dwell time:<input id="dwellin" name="dwell" type="text" value="100"/>
+
+<div class="mark">
+<div class="l">{</div>
+<div class="mark">
+  <div class="l">{</div>
+    <div class="pic"><img src="thm/0910168823.jpg"  alt="09101168823" id="i09101168823"><p>09101168823</p></div>
+    <div class="pic"><img src="thm/0910168824.jpg"  alt="09101168824" id="i09101168824"><p>09101168824</p></div>
+    <div class="pic"><img src="thm/0910168825.jpg"  alt="09101168825" id="i09101168825"><p>09101168825</p></div>
+    <div class="pic"><img src="thm/0910168826.jpg"  alt="09101168826" id="i09101168826"><p>09101168826</p></div>
+    <div class="pic"><img src="thm/0910168827.jpg"  alt="09101168827" id="i09101168827"><p>09101168827</p></div>
+    <div class="pic"><img src="thm/0910168828.jpg"  alt="09101168828" id="i09101168828"><p>09101168828</p></div>
+<div class="r">}</div></div>
+    <div class="pic"><img src="thm/0910188724.jpg" alt="0910188724"  id="i0910188724" ><p>0910188724</p></div>
+    <div class="pic"><img src="thm/0910188797.jpg" alt="0910188797"  id="i0910188797" ><p>0910188797</p></div>
+<div class="mark">
+  <div class="l">{</div>
+    <div class="pic"><img src="thm/0910188946.jpg"  alt="0910188946"  id="i0910188946" ><p>0910188946</p></div>
+    <div class="pic"><img src="thm/0910189572.jpg"  alt="0910189572"  id="i0910189572" ><p>0910189572</p></div>
+<div class="r">}</div></div>
+<div class="r">}</div></div>
+
+<div class="note">
+</div></body> </html>
